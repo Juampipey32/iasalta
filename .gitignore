@@ -89,3 +89,7 @@ temp/
 
 # Git
 # No .gitignore in gitignore!
+
+# FTP Configuration (NEVER commit credentials!)
+.env.ftp
+*.ftp
