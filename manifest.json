@@ -1,0 +1,22 @@
+{
+  "name": "JUAMPI IA - Neural Future Hub",
+  "short_name": "JUAMPI IA",
+  "description": "Explorando las fronteras de la inteligencia artificial y la neurociencia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00ffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "imagenes/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "imagenes/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

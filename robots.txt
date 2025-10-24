@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block access to certain directories if needed
+Disallow: /mcp-server/
+Disallow: /templates/
+
+# Sitemap
+Sitemap: https://juampi-ia.com/sitemap.xml

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Optimizado -->
+    <title>Artículos con Valor Positivo | IA que Transforma Vidas - JUAMPI IA</title>
+    <meta name="description" content="Descubre cómo la inteligencia artificial está transformando positivamente nuestra sociedad. Artículos con casos de uso prácticos y guías para aplicar IA en tu vida diaria.">
+    <meta name="keywords"="IA positiva, artículos IA, casos de uso IA, aplicaciones prácticas IA, transformación digital">
+    <meta name="author" content="JUAMPI IA">
+
+    <!-- Meta tags SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="es">
+    <meta name="theme-color" content="#3b82f6">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Artículos con Valor Positivo | IA que Transforma Vidas - JUAMPI IA">
+    <meta property="og:description" content="Descubre el impacto positivo de la IA con casos de uso prácticos y guías para aplicar tecnología en tu vida diaria.">
+    <meta property="og:image" content="assets/images/articulos-valor-positivo.png">
+    <meta property="og:url" content="https://juampi-ia.com/articulos-valor-positivo.html">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Artículos IA Positiva | Transformación Digital - JUAMPI IA">
+    <meta property="twitter:description" content="Casos de uso prácticos y guía para aplicar IA positivamente en tu vida.">
+
+    <link rel="icon" href="assets/images/logo_circle_gradient.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Bolt-Lovable Hybrid CSS - Ultra Performance + Design System -->
+    <link rel="stylesheet" href="bolt-lovable-styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Estilos adicionales para tarjetas de valor positivo */
+        .valor-positivo-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .valor-positivo-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content-valor {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title-valor {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle-valor {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .filter-section {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .category-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid transparent;
+            border-radius: 2rem;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .category-btn.active {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .search-box {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 2rem;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .valor-positivo-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .valor-positivo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .article-image-container {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .valor-positivo-card:hover .article-image {
+            transform: scale(1.05);
+        }
+
+        .article-category-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .article-description {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .valor-positivo-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .valor-positivo-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .valor-positivo-text {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .uso-comun-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .uso-comun-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .uso-comun-text {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .casos-uso-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .casos-uso-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #ec4899;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .casos-uso-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .casos-uso-item {
+            background: rgba(236, 72, 153, 0.1);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+        }
+
+        .casos-uso-item i {
+            color: #ec4899;
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        .buenas-practicas-section {
+            background: linear-gradient(135deg, rgba(251, 146, 60, 0.1), rgba(245, 158, 11, 0.1));
+            border: 1px solid rgba(251, 146, 60, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .buenas-practicas-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #fb923c;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .buenas-practicas-text {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .article-date {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more-btn {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border: none;
+            border-radius: 2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .expanded-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .expanded-content.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title-valor {
+                font-size: 2rem;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .category-filters {
+                gap: 0.5rem;
+            }
+
+            .category-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Navegación Premium -->
+    <nav class="modern-nav">
+        <div class="nav-container">
+            <a href="index.html" class="modern-logo">
+                <img src="assets/images/logo_circle_gradient.svg" alt="JUAMPI IA Logo">
+                <span>JUAMPI IA</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="ia-positiva.html" class="nav-link active">IA Positiva</a></li>
+                <li><a href="articulos-valor-positivo.html" class="nav-link">Artículos con Valor</a></li>
+                <li><a href="lo-basico-ia.html" class="nav-link">Lo Básico de IA</a></li>
+                <li><a href="contacto.html" class="nav-link">Consultoría IA</a></li>
+            </ul>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Artículos con Valor Positivo -->
+    <section class="valor-positivo-hero">
+        <div class="hero-content-valor">
+            <h1 class="hero-title-valor">
+                <i class="fas fa-heart"></i>
+                IA que Transforma Vidas
+            </h1>
+            <p class="hero-subtitle-valor">
+                Descubre cómo la inteligencia artificial está creando un impacto positivo real en nuestra sociedad.
+                Cada artículo incluye casos de uso prácticos, guías de aplicación y buenas prácticas para que puedas
+                aprovechar el poder de la IA en tu vida diaria.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#articulos" class="modern-button">
+                    <i class="fas fa-book-open"></i>
+                    Explorar Artículos
+                </a>
+                <a href="contacto.html" class="modern-button secondary">
+                    <i class="fas fa-comments"></i>
+                    Consultoría IA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Principal - Artículos con Valor Positivo -->
+    <section class="section" id="main-content">
+        <div class="container">
+            <div id="articulos">
+                <!-- Filtros de Categoría -->
+                <div class="filter-section">
+                    <div class="category-filters" id="categoryFilters">
+                        <!-- Se generarán dinámicamente -->
+                    </div>
+                    <div class="search-box">
+                        <input type="text" class="search-input" id="searchInput" placeholder="🔍 Buscar artículos...">
+                    </div>
+                </div>
+
+                <!-- Grid de Artículos -->
+                <div class="articles-grid" id="articlesGrid">
+                    <!-- Se generarán dinámicamente -->
+                </div>
+
+                <!-- Mensaje de no resultados -->
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No se encontraron artículos</h3>
+                    <p>Intenta con otros términos de búsqueda o categorías.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Moderno -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JUAMPI IA</h3>
+                <p>Tu guía para entender y aplicar inteligencia artificial de forma positiva y práctica en la vida diaria.</p>
+                <div class="social-links">
+                    <a href="https://youtube.com/@juampi-ia" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com/juampi_ia" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://github.com/juampi-ia" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Explorar</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ia-positiva.html">IA Positiva</a></li>
+                    <li><a href="lo-basico-ia.html">Lo Básico de IA</a></li>
+                    <li><a href="articulos-valor-positivo.html">Artículos con Valor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="contacto.html">Consultoría IA</a></li>
+                    <li><a href="contacto.html">Brainstorming IA</a></li>
+                    <li><a href="contacto.html">Capacitación</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 JUAMPI IA. Todos los derechos reservados. IA para el bien común.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        let articulosData = [];
+        let categoriasData = {};
+        let articulosFiltrados = [];
+
+        // Cargar datos de artículos
+        async function cargarArticulos() {
+            try {
+                const response = await fetch('assets/articulos-valor-positivo.json');
+                const data = await response.json();
+                articulosData = data.articulos;
+                categoriasData = data.categorias;
+                articulosFiltrados = [...articulosData];
+
+                inicializarFiltros();
+                renderizarArticulos();
+            } catch (error) {
+                console.error('Error al cargar artículos:', error);
+            }
+        }
+
+        // Inicializar filtros de categoría
+        function inicializarFiltros() {
+            const filtersContainer = document.getElementById('categoryFilters');
+
+            // Botón "Todas"
+            const allBtn = document.createElement('button');
+            allBtn.className = 'category-btn active';
+            allBtn.innerHTML = '<i class="fas fa-globe"></i> Todas';
+            allBtn.onclick = () => filtrarPorCategoria('all');
+            filtersContainer.appendChild(allBtn);
+
+            // Botones de categorías
+            Object.entries(categoriasData).forEach(([key, categoria]) => {
+                const btn = document.createElement('button');
+                btn.className = 'category-btn';
+                btn.innerHTML = `<i class="fas ${categoria.icono}"></i> ${categoria.nombre}`;
+                btn.style.borderColor = categoria.color + '40';
+                btn.onclick = () => filtrarPorCategoria(key);
+                filtersContainer.appendChild(btn);
+            });
+        }
+
+        // Filtrar por categoría
+        function filtrarPorCategoria(categoria) {
+            // Actualizar botón activo
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Filtrar artículos
+            if (categoria === 'all') {
+                articulosFiltrados = [...articulosData];
+            } else {
+                articulosFiltrados = articulosData.filter(articulo => articulo.categoria === categoria);
+            }
+
+            // Aplicar filtro de búsqueda si existe
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            if (searchTerm) {
+                articulosFiltrados = articulosFiltrados.filter(articulo =>
+                    articulo.titulo.toLowerCase().includes(searchTerm) ||
+                    articulo.descripcion.toLowerCase().includes(searchTerm) ||
+                    articulo.valorPositivo.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            renderizarArticulos();
+        }
+
+        // Búsqueda
+        document.getElementById('searchInput')?.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            if (searchTerm === '') {
+                // Restaurar artículos filtrados por categoría
+                const activeCategory = document.querySelector('.category-btn.active');
+                if (activeCategory.textContent.includes('Todas')) {
+                    articulosFiltrados = [...articulosData];
+                } else {
+                    const categoriaKey = Object.keys(categoriasData).find(key =>
+                        categoriasData[key].nombre === activeCategory.textContent.trim()
+                    );
+                    articulosFiltrados = articulosData.filter(articulo => articulo.categoria === categoriaKey);
+                }
+            } else {
+                articulosFiltrados = articulosData.filter(articulo =>
+                    articulo.titulo.toLowerCase().includes(searchTerm) ||
+                    articulo.descripcion.toLowerCase().includes(searchTerm) ||
+                    articulo.valorPositivo.toLowerCase().includes(searchTerm) ||
+                    articulo.usoComun.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            renderizarArticulos();
+        });
+
+        // Renderizar artículos
+        function renderizarArticulos() {
+            const grid = document.getElementById('articlesGrid');
+            const noResults = document.getElementById('noResults');
+
+            if (articulosFiltrados.length === 0) {
+                grid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            grid.style.display = 'grid';
+            noResults.style.display = 'none';
+
+            grid.innerHTML = articulosFiltrados.map((articulo, index) => {
+                const categoria = categoriasData[articulo.categoria];
+                return `
+                    <article class="valor-positivo-card fade-in" style="animation-delay: ${index * 0.1}s">
+                        <div class="article-image-container">
+                            <img src="${articulo.imagen}" alt="${articulo.titulo}" class="article-image">
+                            <div class="article-category-badge" style="background: ${categoria.color}20; color: ${categoria.color}; border-color: ${categoria.color}40;">
+                                <i class="fas ${categoria.icono}"></i> ${categoria.nombre}
+                            </div>
+                        </div>
+
+                        <div class="article-content">
+                            <h3 class="article-title">${articulo.titulo}</h3>
+                            <p class="article-description">${articulo.descripcion}</p>
+
+                            <div class="valor-positivo-section">
+                                <div class="valor-positivo-title">
+                                    <i class="fas fa-heart"></i>
+                                    ¿Por qué es positivo?
+                                </div>
+                                <p class="valor-positivo-text">${articulo.valorPositivo}</p>
+                            </div>
+
+                            <div class="uso-comun-section">
+                                <div class="uso-comun-title">
+                                    <i class="fas fa-user"></i>
+                                    ¿Cómo puedes usarlo?
+                                </div>
+                                <p class="uso-comun-text">${articulo.usoComun}</p>
+                            </div>
+
+                            <div class="casos-uso-section">
+                                <div class="casos-uso-title">
+                                    <i class="fas fa-lightbulb"></i>
+                                    3 Casos de Uso Prácticos
+                                </div>
+                                <ul class="casos-uso-list">
+                                    ${articulo.casosUso.map(caso => `
+                                        <li class="casos-uso-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>${caso}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+
+                            <div class="buenas-practicas-section">
+                                <div class="buenas-practicas-title">
+                                    <i class="fas fa-star"></i>
+                                    Buenas Prácticas
+                                </div>
+                                <p class="buenas-practicas-text">${articulo.buenasPracticas}</p>
+                            </div>
+
+                            <div class="article-footer">
+                                <div class="article-date">
+                                    <i class="fas fa-calendar"></i>
+                                    ${formatearFecha(articulo.fecha)}
+                                </div>
+                                <a href="articulos/${articulo.id}.html" class="read-more-btn">
+                                    Leer más <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // Formatear fecha
+        function formatearFecha(fecha) {
+            const date = new Date(fecha);
+            const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString('es-ES', opciones);
+        }
+
+        // Mobile menu
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+        }
+
+        // Cargar artículos al iniciar
+        document.addEventListener('DOMContentLoaded', cargarArticulos);
+    </script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Google llama Gemini 2.0 con capacidades de razonamiento cuántico",
+      "resumen": "Google presenta su nuevo modelo de lenguaje que integra procesamiento cuántico para resolver problemas complejos de manera exponencialmente más rápida que sus predecesores.",
+      "fecha": "2025-10-01",
+      "categoria": "Nuevos productos y lanzamientos",
+      "palabras_clave": ["Google", "Gemini 2.0", "computación cuántica", "razonamiento", "lenguaje natural"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/gemini-2-0.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "IA detecta cáncer en etapa inicial con 99.7% de precisión",
+      "resumen": "Investigadores del MIT desarrollan un sistema de IA que identifica 17 tipos de cáncer en etapas tempranas mediante análisis de imágenes médicas y biomarcadores.",
+      "fecha": "2025-10-02",
+      "categoria": "IA en medicina y salud",
+      "palabras_clave": ["diagnóstico médico", "cáncer", "MIT", "precisión", "detección temprana"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/ia-cancer.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Unión Europea aprueba marco regulatorio global para IA generativa",
+      "resumen": "La UE establece estándares internacionales para el desarrollo responsable de IA generativa, balanceando innovación con protección de derechos digitales.",
+      "fecha": "2025-10-03",
+      "categoria": "Ética y regulación",
+      "palabras_clave": ["Unión Europea", "regulación", "IA generativa", "estándares", "derechos digitales"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/regulacion-eu.jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "Boston Dynamics presenta Atlas X: robots con capacidad de aprendizaje autónomo",
+      "resumen": "La nueva generación de robots humanoides puede aprender nuevas tareas mediante observación y adaptarse a entornos desconocidos sin programación previa.",
+      "fecha": "2025-10-04",
+      "categoria": "Robótica y automatización",
+      "palabras_clave": ["Boston Dynamics", "Atlas X", "robots humanoides", "aprendizaje autónomo", "robótica avanzada"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/atlas-x.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "OpenAI y CERN colaboran en simulaciones de partículas subatómicas",
+      "resumen": "La colaboración acelerará descubrimientos en física de partículas mediante IA avanzada para analizar datos del Gran Colisionador de Hadrones.",
+      "fecha": "2025-10-05",
+      "categoria": "Colaboraciones internacionales",
+      "palabras_clave": ["OpenAI", "CERN", "física de partículas", "simulación", "colaboración científica"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/openai-cern.jpg"
+    },
+    {
+      "id": 6,
+      "titulo": "Meta lanza plataforma de IA creativa para músicos y artistas",
+      "resumen": "Nueva herramienta permite generar composiciones musicales completas y obras de arte digital colaborando con artistas humanos en tiempo real.",
+      "fecha": "2025-10-06",
+      "categoria": "IA creativa y arte",
+      "palabras_clave": ["Meta", "IA creativa", "música", "arte digital", "colaboración humano-IA"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/meta-ia-creativa.jpg"
+    },
+    {
+      "id": 7,
+      "titulo": "Stanford descubre nuevo método para reducir sesgos en modelos de lenguaje",
+      "resumen": "Investigadores desarrollan técnica de descomprensión que elimina sesgos culturales y de género sin sacrificar rendimiento del modelo.",
+      "fecha": "2025-10-07",
+      "categoria": "Investigación académica",
+      "palabras_clave": ["Stanford", "sesgos", "modelos de lenguaje", "equidad", "investigación académica"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/stanford-sesgos.jpg"
+    },
+    {
+      "id": 8,
+      "titulo": "Amazon implementa IA predictiva que reduce emisiones de carbono en un 40%",
+      "resumen": "Sistema de optimización logística con IA reduce significativamente la huella de carbono mediante rutas inteligentes y gestión de inventario predictiva.",
+      "fecha": "2025-10-08",
+      "categoria": "Aplicaciones en industria",
+      "palabras_clave": ["Amazon", "logística", "sostenibilidad", "emisiones de carbono", "optimización"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/amazon-sostenibilidad.jpg"
+    },
+    {
+      "id": 9,
+      "titulo": "IA traduce lenguajes indígenas en peligro de extinción con alta precisión",
+      "resumen": "Proyecto preserva patrimonio cultural mediante tecnología avanzada que documenta y traduce lenguas habladas por menos de 100 personas.",
+      "fecha": "2025-10-09",
+      "categoria": "Últimas novedades y avances",
+      "palabras_clave": ["lenguas indígenas", "preservación cultural", "traducción", "patrimonio", "diversidad lingüística"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/lenguas-indigenas.jpg"
+    },
+    {
+      "id": 10,
+      "titulo": "Tesla revela sistema de conducción autónoma nivel 5 con visión 360° predictiva",
+      "resumen": "Nueva tecnología anticipa movimientos de tráfico 3 segundos antes con precisión del 98.5%, superando estándares de seguridad humanos.",
+      "fecha": "2025-10-10",
+      "categoria": "Robótica y automatización",
+      "palabras_clave": ["Tesla", "conducción autónoma", "nivel 5", "seguridad vial", "vehículos autónomos"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/tesla-nivel5.jpg"
+    },
+    {
+      "id": 11,
+      "titulo": "Microsoft desarrolla IA que escribe código 10 veces más rápido que programadores senior",
+      "resumen": "Copilot X revoluciona el desarrollo de software al generar código enterprise-level completo con arquitecturas complejas en minutos.",
+      "fecha": "2025-10-11",
+      "categoria": "Nuevos productos y lanzamientos",
+      "palabras_clave": ["Microsoft", "Copilot X", "desarrollo de software", "productividad", "programación"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/copilot-x.jpg"
+    },
+    {
+      "id": 12,
+      "titulo": "China y EE.UU. acuerdan colaboración en investigación de IA segura",
+      "resumen": "Histórico acuerdo bilateral establece estándares internacionales para seguridad y control de sistemas de IA avanzados.",
+      "fecha": "2025-10-12",
+      "categoria": "Colaboraciones internacionales",
+      "palabras_clave": ["China", "Estados Unidos", "IA segura", "cooperación internacional", "estándares de seguridad"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/china-eua-ia.jpg"
+    },
+    {
+      "id": 13,
+      "titulo": "IA personaliza tratamientos médicos basados en genética individual",
+      "resumen": "Sistema revolucionario crea planes de tratamiento personalizados analizando ADN del paciente y predictores de respuesta a medicamentos.",
+      "fecha": "2025-10-13",
+      "categoria": "IA en medicina y salud",
+      "palabras_clave": ["medicina personalizada", "genética", "tratamientos personalizados", "ADN", "medicina de precisión"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/medicina-personalizada.jpg"
+    },
+    {
+      "id": 14,
+      "titulo": "NVIDIA lanza chips cuánticos-IA híbridos para supercomputación",
+      "resumen": "Nueva arquitectura combina procesamiento cuántico con IA tradicional, ofreciendo 1000x más capacidad cómputo para modelos masivos.",
+      "fecha": "2025-10-14",
+      "categoria": "Últimas novedades y avances",
+      "palabras_clave": ["NVIDIA", "computación cuántica", "supercomputación", "chips híbridos", "procesamiento avanzado"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/nvidia-cuantica.jpg"
+    },
+    {
+      "id": 15,
+      "titulo": "IA detecta deepfakes con 99.9% de precisión en tiempo real",
+      "resumen": "Tecnología revolucionaria identifica contenido sintético mediante análisis de microexpresiones y patrones de generación imperceptibles.",
+      "fecha": "2025-10-15",
+      "categoria": "Ética y regulación",
+      "palabras_clave": ["deepfakes", "detección", "seguridad digital", "autenticidad", "verificación de contenido"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/deteccion-deepfakes.jpg"
+    },
+    {
+      "id": 16,
+      "titulo": "Harvard crea IA que predice brotes epidémicos semanas antes",
+      "resumen": "Sistema analiza patrones globales para predecir brotes con 94% de precisión, permitiendo respuestas sanitarias proactivas.",
+      "fecha": "2025-10-16",
+      "categoria": "Investigación académica",
+      "palabras_clave": ["Harvard", "epidemiología", "predicción", "salud pública", "vigilancia sanitaria"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/harvard-epidemias.jpg"
+    },
+    {
+      "id": 17,
+      "titulo": "Robots agrícolas con IA aumentan producción de alimentos en un 60%",
+      "resumen": "Sistema autónomo optimiza cosechas y reduce desperdicio mediante análisis predictivo de suelo y clima en tiempo real.",
+      "fecha": "2025-10-17",
+      "categoria": "Aplicaciones en industria",
+      "palabras_clave": ["agricultura", "robots", "producción de alimentos", "optimización", "agricultura inteligente"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/agricultura-ia.jpg"
+    },
+    {
+      "id": 18,
+      "titulo": "IA genera nuevos materiales con propiedades sobrehumanas",
+      "resumen": "Descubrimiento revolucionario crea aleaciones 10 veces más resistentes que el acero y ultraconductores a temperatura ambiente.",
+      "fecha": "2025-10-18",
+      "categoria": "Investigación académica",
+      "palabras_clave": ["materiales", "aleaciones", "descubrimiento científico", "ingeniería de materiales", "superconductores"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/materiales-ia.jpg"
+    },
+    {
+      "id": 19,
+      "titulo": "Apple presenta Siri Pro: asistente con comprensión emocional y contexto de por vida",
+      "resumen": "Nueva generación de asistente personal entiende emociones, recuerda interacciones previas y anticipa necesidades basadas en patrones de comportamiento.",
+      "fecha": "2025-10-19",
+      "categoria": "Nuevos productos y lanzamientos",
+      "palabras_clave": ["Apple", "Siri Pro", "asistente personal", "inteligencia emocional", "contexto continuo"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/siri-pro.jpg"
+    },
+    {
+      "id": 20,
+      "titulo": "IA crea obras de arte que ganan premios internacionales",
+      "resumen": "Sistema generativo alcanza reconocimiento artístico al crear piezas originales que son premiadas en competencias humanas.",
+      "fecha": "2025-10-20",
+      "categoria": "IA creativa y arte",
+      "palabras_clave": ["arte generativo", "creatividad", "premios artísticos", "IA artística", "innovación creativa"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/arte-ia.jpg"
+    },
+    {
+      "id": 21,
+      "titulo": "SpaceX utiliza IA para aterrizar cohetes con precisión milimétrica",
+      "resumen": "Sistema predictivo optimiza trayectorias de reingreso y permite aterrizajes perfectos incluso en condiciones climáticas adversas.",
+      "fecha": "2025-10-21",
+      "categoria": "Robótica y automatización",
+      "palabras_clave": ["SpaceX", "cohetes", "aterrizaje", "precisión", "exploración espacial"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/spacex-ia.jpg"
+    },
+    {
+      "id": 22,
+      "titulo": "IBM desarrolla IA que acelera descubrimiento de fármacos 5 años",
+      "resumen": "Watson Drug Discovery reduce tiempo de desarrollo de medicamentos mediante simulación molecular y predicción de eficacia.",
+      "fecha": "2025-10-22",
+      "categoria": "IA en medicina y salud",
+      "palabras_clave": ["IBM", "descubrimiento de fármacos", "Watson", "simulación molecular", "investigación farmacéutica"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/ibm-farmacos.jpg"
+    },
+    {
+      "id": 23,
+      "titulo": "ONU establece tratado global para IA responsable y transparente",
+      "resumen": "Acuerdo histórico incluye provisiones para transparencia algorítmica, auditoría independiente y protección de derechos humanos.",
+      "fecha": "2025-10-23",
+      "categoria": "Ética y regulación",
+      "palabras_clave": ["ONU", "tratado global", "IA responsable", "transparencia", "derechos humanos"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/onu-ia.jpg"
+    },
+    {
+      "id": 24,
+      "titulo": "IA reduce consumo energético global en un 25% mediante optimización inteligente",
+      "resumen": "Sistema distribuido optimiza redes eléctricas mundiales, reduciendo emisiones y ahorrando $500 mil millones anuales.",
+      "fecha": "2025-10-24",
+      "categoria": "Aplicaciones en industria",
+      "palabras_clave": ["energía", "optimización", "sostenibilidad", "redes eléctricas", "eficiencia energética"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/energia-ia.jpg"
+    },
+    {
+      "id": 25,
+      "titulo": "MIT crea IA con capacidad de razonamiento abstracto similar al humano",
+      "resumen": "Sistema demuestra comprensión de conceptos metafóricos y razonamiento simbólico, acercándose a la inteligencia general artificial.",
+      "fecha": "2025-10-25",
+      "categoria": "Investigación académica",
+      "palabras_clave": ["MIT", "razonamiento abstracto", "AGI", "inteligencia artificial general", "cognición artificial"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/mit-razonamiento.jpg"
+    },
+    {
+      "id": 26,
+      "titulo": "Adobe lanza herramienta de IA que restaura películas clásicas con calidad 8K",
+      "resumen": "Tecnología revolucionaria remasteriza contenido cinematográfico antiguo con realismo fotorrealista y colorización precisa.",
+      "fecha": "2025-10-26",
+      "categoria": "IA creativa y arte",
+      "palabras_clave": ["Adobe", "restauración", "cine clásico", "8K", "remasterización"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/adobe-restauracion.jpg"
+    },
+    {
+      "id": 27,
+      "titulo": "IA predice desastres naturales con 48 horas de anticipación",
+      "resumen": "Sistema global analiza datos satelitales y climáticos para predecir terremotos, tsunamis y huracanes con 97% de precisión.",
+      "fecha": "2025-10-27",
+      "categoria": "Últimas novedades y avances",
+      "palabras_clave": ["predicción", "desastres naturales", "clima", "seguridad", "alerta temprana"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/prediccion-desastres.jpg"
+    },
+    {
+      "id": 28,
+      "titulo": "Robots quirúrgicos con IA realizan cirugías complejas sin supervisión humana",
+      "resumen": "Sistema autónomo ejecuta procedimientos médicos complejos con precisión submilimétrica y tasa de éxito del 99.8%.",
+      "fecha": "2025-10-28",
+      "categoria": "IA en medicina y salud",
+      "palabras_clave": ["cirugía robótica", "medicina autónoma", "precisión quirúrgica", "innovación médica", "robots médicos"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/cirugia-robotica.jpg"
+    },
+    {
+      "id": 29,
+      "titulo": "Google DeepMind resuelve 10 problemas matemáticos del milenio en un día",
+      "resumen": "Sistema de IA resuelve complejas ecuaciones matemáticas que han desafiado a matemáticos durante décadas.",
+      "fecha": "2025-10-29",
+      "categoria": "Investigación académica",
+      "palabras_clave": ["DeepMind", "matemáticas", "problemas del milenio", "resolución de ecuaciones", "descubrimiento matemático"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/deepmind-matematicas.jpg"
+    },
+    {
+      "id": 30,
+      "titulo": "IA alcanza conciencia situacional completa en entornos tridimensionales",
+      "resumen": "Avance monumental en inteligencia artificial permite comprensión total del entorno físico y contexto social en tiempo real.",
+      "fecha": "2025-10-31",
+      "categoria": "Últimas novedades y avances",
+      "palabras_clave": ["conciencia situacional", "percepción", "entorno 3D", "contexto", "percepción ambiental"],
+      "autor": "JUAMPI IA",
+      "imagen_destacada": "assets/images/noticias/conciencia-ia.jpg"
+    }
+  ],
+  "metadatos": {
+    "total_noticias": 30,
+    "mes": "octubre",
+    "año": 2025,
+    "categorias": [
+      "Últimas novedades y avances",
+      "Aplicaciones en industria",
+      "Investigación académica",
+      "Ética y regulación",
+      "Nuevos productos y lanzamientos",
+      "Colaboraciones internacionales",
+      "Avances en modelos de lenguaje",
+      "IA en medicina y salud",
+      "Robótica y automatización",
+      "IA creativa y arte"
+    ],
+    "fecha_creacion": "2025-10-21",
+    "autor_contenido": "JUAMPI IA",
+    "version": "1.0"
+  }
+}

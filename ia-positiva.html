@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Optimizado - Blog IA Positiva -->
+    <title>Blog IA Positiva | Noticias y Artículos que Transforman el Mundo - JUAMPI IA</title>
+    <meta name="description" content="Descubre las últimas noticias y artículos de IA con impacto positivo. Innovaciones en salud, educación, medio ambiente y tecnología que están transformando nuestra sociedad para mejor.">
+    <meta name="keywords" content="blog IA, noticias IA, artículos IA, IA positiva, innovación IA, tecnología responsable, impacto social IA">
+    <meta name="author" content="JUAMPI IA">
+
+    <!-- Meta tags SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="es">
+    <meta name="theme-color" content="#667eea">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog IA Positiva | Noticias y Artículos con Impacto - JUAMPI IA">
+    <meta property="og:description" content="Descubre las últimas noticias y artículos de IA con impacto positivo real. Innovaciones que transforman el mundo.">
+    <meta property="og:image" content="assets/images/8be46b00-4882-4600-b720-4d76db9c35db.png">
+    <meta property="og:url" content="https://juampi-ia.com/ia-positiva.html">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Blog IA Positiva | Noticias y Artículos - JUAMPI IA">
+    <meta property="twitter:description" content="Descubre cómo la IA está transformando positivamente nuestro mundo.">
+
+    <link rel="icon" href="assets/images/logo_circle_gradient.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Critical CSS - Inline for above-the-fold content -->
+    <style>
+        /* Design Tokens Modernos */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --dark-gradient: linear-gradient(135deg, #0a0e27 0%, #151933 50%, #1a1f3a 100%);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.4);
+            --shadow-glow: 0 0 30px rgba(102, 126, 234, 0.3);
+            --header-height: 80px;
+            --container-max-width: 1400px;
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset and Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--dark-gradient);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Glassmorphism */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: rgba(10, 14, 39, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 14, 39, 0.95);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .nav-container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            left: 0;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Blog Hero Section */
+        .blog-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: var(--header-height) 2rem 2rem;
+        }
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(240, 147, 251, 0.1) 0%, transparent 70%);
+            animation: float-particles 20s ease-in-out infinite;
+        }
+
+        @keyframes float-particles {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(-30px, -50px) rotate(90deg); }
+            50% { transform: translate(50px, -30px) rotate(180deg); }
+            75% { transform: translate(-20px, 40px) rotate(270deg); }
+        }
+
+        .blog-hero-content {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--secondary-gradient);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-glow);
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .blog-title {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .blog-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* Blog Stats */
+        .blog-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .blog-stat-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 2rem;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .blog-stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Controls Section */
+        .blog-controls {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 2rem;
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: var(--container-max-width);
+        }
+
+        .controls-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .controls-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--glass-border);
+            border-radius: 2rem;
+            background: var(--glass-bg);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-tab:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .filter-tab.active {
+            background: var(--primary-gradient);
+            border-color: transparent;
+            color: white;
+        }
+
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--glass-border);
+            border-radius: 2rem;
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 3rem 2rem;
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        /* News Cards */
+        .news-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 2rem;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .news-card-header {
+            position: relative;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .news-category {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-gradient);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .news-date {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .news-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .valor-positivo-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .valor-positivo-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .valor-positivo-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .uso-comun-section {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .uso-comun-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .uso-comun-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .casos-uso-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .casos-uso-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ec4899;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .casos-uso-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .casos-uso-item {
+            background: rgba(236, 72, 153, 0.1);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.5;
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+        }
+
+        .casos-uso-item i {
+            color: #ec4899;
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        .buenas-practicas-section {
+            background: linear-gradient(135deg, rgba(251, 146, 60, 0.1), rgba(245, 158, 11, 0.1));
+            border: 1px solid rgba(251, 146, 60, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .buenas-practicas-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fb923c;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .buenas-practicas-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .pagination-btn {
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--glass-border);
+            border-radius: 0.5rem;
+            background: var(--glass-bg);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .pagination-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+        }
+
+        .pagination-btn.active {
+            background: var(--primary-gradient);
+            border-color: transparent;
+            color: white;
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            :root {
+                --header-height: 70px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: var(--header-height);
+                left: 0;
+                right: 0;
+                background: rgba(10, 14, 39, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                box-shadow: var(--shadow-xl);
+            }
+
+            .nav-menu.active {
+                transform: translateX(0);
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .blog-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .filter-tabs {
+                gap: 0.5rem;
+            }
+
+            .filter-tab {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-delay-1 { animation-delay: 0.1s; }
+        .fade-in-delay-2 { animation-delay: 0.2s; }
+        .fade-in-delay-3 { animation-delay: 0.3s; }
+    </style>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Modern -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/images/logo_circle_gradient.svg" alt="JUAMPI IA Logo">
+                <span>JUAMPI IA</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="ia-positiva.html" class="nav-link active">IA Positiva</a></li>
+                <li><a href="articulos-valor-positivo.html" class="nav-link">Artículos con Valor</a></li>
+                <li><a href="lo-basico-ia.html" class="nav-link">Lo Básico de IA</a></li>
+                <li><a href="contacto.html" class="nav-link">Consultoría IA</a></li>
+            </ul>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="hero-particles"></div>
+
+        <div class="blog-hero-content fade-in">
+            <div class="blog-badge">
+                <i class="fas fa-heart"></i>
+                <span>Blog de IA Positiva</span>
+            </div>
+
+            <h1 class="blog-title">
+                Noticias y Artículos que Transforman el Mundo
+            </h1>
+
+            <p class="blog-subtitle">
+                Descubre las últimas noticias y análisis profundos sobre cómo la inteligencia artificial
+                está creando un impacto positivo real en nuestra sociedad.
+            </p>
+
+            <div class="blog-stats">
+                <div class="blog-stat-card">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Noticias de Octubre</div>
+                </div>
+                <div class="blog-stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Artículos con Valor</div>
+                </div>
+                <div class="blog-stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Impacto Positivo</div>
+                </div>
+                <div class="blog-stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Contenido Actualizado</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Controls -->
+    <div class="blog-controls">
+        <div class="controls-header">
+            <h2 class="controls-title">Explora Contenido Positivo</h2>
+            <p class="section-subtitle">Filtra por tipo de contenido o busca temas específicos</p>
+        </div>
+
+        <div class="filter-tabs" id="filterTabs">
+            <button class="filter-tab active" data-filter="all">
+                <i class="fas fa-globe"></i> Todo
+            </button>
+            <button class="filter-tab" data-filter="news">
+                <i class="fas fa-newspaper"></i> Noticias
+            </button>
+            <button class="filter-tab" data-filter="articles">
+                <i class="fas fa-book-open"></i> Artículos
+            </button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="🔍 Buscar noticias, artículos o temas...">
+        </div>
+    </div>
+
+    <!-- Noticias de Octubre 2025 -->
+    <section class="content-section" id="noticias-section">
+        <div class="section-header">
+            <h2 class="section-title">📰 Noticias de Octubre 2025</h2>
+            <p class="section-subtitle">Las últimas noticias sobre inteligencia artificial con impacto positivo</p>
+        </div>
+
+        <div class="content-grid" id="newsGrid">
+            <!-- Las noticias se cargarán dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Artículos con Valor Positivo -->
+    <section class="content-section" id="articulos-section">
+        <div class="section-header">
+            <h2 class="section-title">📖 Artículos con Valor Positivo</h2>
+            <p class="section-subtitle">Análisis profundos con casos de uso prácticos y guías de aplicación</p>
+        </div>
+
+        <div class="content-grid" id="articlesGrid">
+            <!-- Los artículos se cargarán dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination">
+        <!-- Se generará dinámicamente -->
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Global variables
+        let noticiasData = [];
+        let articulosData = [];
+        let filteredContent = [];
+        let currentFilter = 'all';
+        let currentPage = 1;
+        const itemsPerPage = 6;
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+
+            const navLinks = navMenu.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    const icon = mobileMenuToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-times');
+                    }
+                });
+            });
+        }
+
+        // Mapeo de imágenes existentes para noticias
+        const imagenesNoticiasDisponibles = [
+            'assets/images/novedad-cuantica.png',
+            'assets/images/novedad-farmacos.png',
+            'assets/images/novedad-espacio.png',
+            'assets/images/Diagnóstico Médico.png',
+            'assets/images/IA en Educación.png',
+            'assets/images/IA y Medio Ambiente.png',
+            'assets/images/robotica-industria.png',
+            'assets/images/IA en Medicina.png',
+            'assets/images/Educación en Conflictos.png',
+            'assets/images/Erradicación Hambre.png',
+            'assets/images/Medicina Personalizada.png',
+            'assets/images/Descubrimientos Científicos.png',
+            'assets/images/Neuralink Avanzado.png',
+            'assets/images/Predicción Futuro.png',
+            'assets/images/Traducción Animal.png',
+            'assets/images/Modificación ADN.png',
+            'assets/images/Comunicación Dimensional.png',
+            'assets/images/Predicción Terremotos.png',
+            'assets/images/Brazo Robótico de Precisión.png',
+            'assets/images/Interacción Humano-Robot.png',
+            'assets/images/Mente Leída.png',
+            'assets/images/Sueños de una IA.png',
+            'assets/images/IA Artista.png',
+            'assets/images/IA Smartphone.png',
+            'assets/images/hero_contacto.png',
+            'assets/images/curiosidades_ia.png',
+            'assets/images/robotica-interaccion.png',
+            'assets/images/curiosidad-sueno.png',
+            'assets/images/curiosidad-artista.png',
+            'assets/images/aplicaciones_increibles.png'
+        ];
+
+        // Cargar datos
+        async function cargarDatos() {
+            try {
+                // Cargar noticias
+                const noticiasResponse = await fetch('assets/noticias-octubre-2025.json');
+                const noticiasJson = await noticiasResponse.json();
+                noticiasData = noticiasJson.noticias;
+
+                // Asignar imágenes existentes a las noticias
+                noticiasData.forEach((noticia, index) => {
+                    if (index < imagenesNoticiasDisponibles.length) {
+                        noticia.imagen_destacada = imagenesNoticiasDisponibles[index];
+                    } else {
+                        // Imagen por defecto para noticias adicionales
+                        noticia.imagen_destacada = 'assets/images/ia_positiva.png';
+                    }
+                });
+
+                // Cargar artículos
+                const articulosResponse = await fetch('assets/articulos-valor-positivo.json');
+                const articulosJson = await articulosResponse.json();
+                articulosData = articulosJson.articulos;
+
+                // Inicializar con todo el contenido
+                filtrarContenido('all');
+            } catch (error) {
+                console.error('Error al cargar datos:', error);
+            }
+        }
+
+        // Filtrar contenido
+        function filtrarContenido(filter) {
+            currentFilter = filter;
+            currentPage = 1;
+
+            // Actualizar tabs activos
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.dataset.filter === filter) {
+                    tab.classList.add('active');
+                }
+            });
+
+            // Filtrar contenido
+            switch (filter) {
+                case 'news':
+                    filteredContent = noticiasData.map(noticia => ({
+                        ...noticia,
+                        type: 'news',
+                        category: 'Noticia',
+                        categoria: 'Noticias'
+                    }));
+                    break;
+                case 'articles':
+                    filteredContent = articulosData.map(articulo => ({
+                        ...articulo,
+                        type: 'article',
+                        category: 'Artículo',
+                        categoria: 'Artículos'
+                    }));
+                    break;
+                default:
+                    filteredContent = [
+                        ...noticiasData.map(noticia => ({
+                            ...noticia,
+                            type: 'news',
+                            category: 'Noticia',
+                            categoria: 'Noticias'
+                        })),
+                        ...articulosData.map(articulo => ({
+                            ...articulo,
+                            type: 'article',
+                            category: 'Artículo',
+                            categoria: 'Artículos'
+                        }))
+                    ];
+            }
+
+            // Aplicar búsqueda si hay término
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            if (searchTerm) {
+                filteredContent = filteredContent.filter(item => {
+                    if (item.type === 'news') {
+                        return item.title.toLowerCase().includes(searchTerm) ||
+                               item.description.toLowerCase().includes(searchTerm) ||
+                               (item.impacto_positivo && item.impacto_positivo.toLowerCase().includes(searchTerm));
+                    } else {
+                        return item.titulo.toLowerCase().includes(searchTerm) ||
+                               item.descripcion.toLowerCase().includes(searchTerm) ||
+                               item.valorPositivo.toLowerCase().includes(searchTerm);
+                    }
+                });
+            }
+
+            renderizarContenido();
+        }
+
+        // Renderizar contenido
+        function renderizarContenido() {
+            const noticiasGrid = document.getElementById('newsGrid');
+            const articlesGrid = document.getElementById('articlesGrid');
+            const pagination = document.getElementById('pagination');
+
+            // Separar noticias y artículos
+            const noticias = filteredContent.filter(item => item.type === 'news');
+            const articulos = filteredContent.filter(item => item.type === 'article');
+
+            // Paginar
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+
+            const paginatedNews = noticias.slice(startIndex, endIndex);
+            const paginatedArticles = articulos.slice(startIndex, endIndex);
+
+            // Renderizar noticias
+            if (paginatedNews.length > 0) {
+                noticiasGrid.innerHTML = paginatedNews.map(noticia => `
+                    <div class="news-card fade-in">
+                        <div class="news-card-header">
+                            <div class="news-category">
+                                <i class="fas fa-newspaper"></i>
+                                ${noticia.category}
+                            </div>
+                            <div class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                ${new Date(noticia.date).toLocaleDateString('es-ES', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                })}
+                            </div>
+                            <h3 class="news-title">${noticia.title}</h3>
+                            <p class="news-description">${noticia.description}</p>
+                        </div>
+                        <div class="news-content">
+                            <div class="valor-positivo-section">
+                                <div class="valor-positivo-title">
+                                    <i class="fas fa-heart"></i>
+                                    ¿Por qué es positivo?
+                                </div>
+                                <p class="valor-positivo-text">${noticia.impacto_positivo || 'Esta noticia representa un avance significativo en el campo de la inteligencia artificial, abriendo nuevas posibilidades para la sociedad.'}</p>
+                            </div>
+                            <div class="uso-comun-section">
+                                <div class="uso-comun-title">
+                                    <i class="fas fa-user"></i>
+                                    ¿Cómo puedes usarlo?
+                                </div>
+                                <p class="uso-comun-text">${noticia.how_to_use || 'Puedes explorar esta tecnología a través de plataformas y aplicaciones que ya están disponibles en el mercado.'}</p>
+                            </div>
+                            <div class="casos-uso-section">
+                                <div class="casos-uso-title">
+                                    <i class="fas fa-lightbulb"></i>
+                                    3 Casos de uso prácticos
+                                </div>
+                                <ul class="casos-uso-list">
+                                    ${noticia.use_cases ? noticia.use_cases.slice(0, 3).map(useCase => `
+                                        <li class="casos-uso-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>${useCase}</span>
+                                        </li>
+                                    `).join('') : `
+                                        <li class="casos-uso-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Aplicaciones en industria y negocios</span>
+                                        </li>
+                                        <li class="casos-uso-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Herramientas para desarrolladores</span>
+                                        </li>
+                                        <li class="casos-uso-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Soluciones para usuarios finales</span>
+                                        </li>
+                                    `}
+                                </ul>
+                            </div>
+                            <div class="buenas-practicas-section">
+                                <div class="buenas-practicas-title">
+                                    <i class="fas fa-star"></i>
+                                    Buenas prácticas
+                                </div>
+                                <p class="buenas-practicas-text">${noticia.best_practices || 'Mantente informado sobre las últimas actualizaciones y usa estas herramientas de manera responsable y ética.'}</p>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                noticiasGrid.innerHTML = '<div class="no-results"><i class="fas fa-newspaper"></i><h3>No hay noticias disponibles</h3></div>';
+            }
+
+            // Renderizar artículos
+            if (paginatedArticles.length > 0) {
+                articlesGrid.innerHTML = paginatedArticles.map(articulo => `
+                    <div class="news-card fade-in">
+                        <div class="news-card-header">
+                            <div class="news-category">
+                                <i class="fas fa-book-open"></i>
+                                ${articulo.category}
+                            </div>
+                            <div class="news-date">
+                                <i class="fas fa-calendar"></i>
+                                ${new Date(articulo.fecha).toLocaleDateString('es-ES', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                })}
+                            </div>
+                            <h3 class="news-title">${articulo.titulo}</h3>
+                            <p class="news-description">${articulo.descripcion}</p>
+                        </div>
+                        <div class="news-content">
+                            <div class="valor-positivo-section">
+                                <div class="valor-positivo-title">
+                                    <i class="fas fa-heart"></i>
+                                    ¿Por qué es positivo?
+                                </div>
+                                <p class="valor-positivo-text">${articulo.valorPositivo}</p>
+                            </div>
+                            <div class="uso-comun-section">
+                                <div class="uso-comun-title">
+                                    <i class="fas fa-user"></i>
+                                    ¿Cómo puedes usarlo?
+                                </div>
+                                <p class="uso-comun-text">${articulo.usoComun}</p>
+                            </div>
+                            <div class="casos-uso-section">
+                                <div class="casos-uso-title">
+                                    <i class="fas fa-lightbulb"></i>
+                                    3 Casos de uso prácticos
+                                </div>
+                                <ul class="casos-uso-list">
+                                    ${articulo.casosUso.map(caso => `
+                                        <li class="casos-uso-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>${caso}</span>
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                            <div class="buenas-practicas-section">
+                                <div class="buenas-practicas-title">
+                                    <i class="fas fa-star"></i>
+                                    Buenas prácticas
+                                </div>
+                                <p class="buenas-practicas-text">${articulo.buenasPracticas}</p>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                articlesGrid.innerHTML = '<div class="no-results"><i class="fas fa-book-open"></i><h3>No hay artículos disponibles</h3></div>';
+            }
+
+            // Renderizar paginación
+            renderizarPaginacion();
+        }
+
+        // Renderizar paginación
+        function renderizarPaginacion() {
+            const pagination = document.getElementById('pagination');
+            const totalItems = filteredContent.length;
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+
+            let paginationHTML = '';
+
+            // Botón anterior
+            paginationHTML += `
+                <button class="pagination-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="cambiarPagina(${currentPage - 1})">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            `;
+
+            // Números de página
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                    paginationHTML += `
+                        <button class="pagination-btn ${i === currentPage ? 'active' : ''}" onclick="cambiarPagina(${i})">
+                            ${i}
+                        </button>
+                    `;
+                } else if (i === currentPage - 2 || i === currentPage + 2) {
+                    paginationHTML += `<span style="color: var(--text-muted);">...</span>`;
+                }
+            }
+
+            // Botón siguiente
+            paginationHTML += `
+                <button class="pagination-btn" ${currentPage === totalPages ? 'disabled' : ''} onclick="cambiarPagina(${currentPage + 1})">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            `;
+
+            pagination.innerHTML = paginationHTML;
+        }
+
+        // Cambiar página
+        function cambiarPagina(page) {
+            currentPage = page;
+            renderizarContenido();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cargar datos iniciales
+            cargarDatos();
+
+            // Filter tabs
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    filtrarContenido(tab.dataset.filter);
+                });
+            });
+
+            // Search input
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', () => {
+                filtrarContenido(currentFilter);
+            });
+        });
+
+        // Hacer la función global para que pueda ser llamada desde el HTML
+        window.cambiarPagina = cambiarPagina;
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+{
+  "articulos": [
+    {
+      "id": "agi-inteligencia-general",
+      "titulo": "AGI: Inteligencia Artificial General",
+      "imagen": "assets/images/articulo_agi.png",
+      "descripcion": "Escenarios, desafíos y oportunidades de una inteligencia artificial con capacidades comparables a las humanas.",
+      "valorPositivo": "La AGI representa el siguiente gran salto en la evolución tecnológica humana, prometiendo resolver problemas globales complejos como enfermedades, cambio climático y desigualdad económica mediante una inteligencia a escala planetaria.",
+      "usoComun": "Aunque la AGI completa aún está en desarrollo, ya podemos beneficiarnos de sus versiones parciales: asistentes avanzados que pueden investigar múltiples fuentes simultáneamente, sistemas de diagnóstico médico que detectan patrones que los humanos podrían pasar por alto, y herramientas educativas personalizadas que se adaptan al estilo de aprendizaje de cada persona.",
+      "casosUso": [
+        "Investigación médica: Análisis simultáneo de millones de estudios para descubrir nuevas conexiones entre enfermedades y posibles tratamientos",
+        "Educación personalizada: Tutores virtuales que crean planes de estudio únicos para cada estudiante basados en sus fortalezas y debilidades",
+        "Resolución de problemas complejos: Simulación de escenarios climáticos para encontrar las mejores estrategias de mitigación del cambio climático"
+      ],
+      "buenasPracticas": "Mantén un equilibrio saludable entre la asistencia de IA y tu propio juicio crítico. La AGI es una herramienta poderosa para amplificar tu inteligencia, no para reemplazarla. Úsala para explorar posibilidades que de otro modo no considerarías, pero siempre valida las conclusiones importantes con tu propio razonamiento y experiencia humana.",
+      "categoria": "futuro",
+      "fecha": "2025-12-02",
+      "icono": "fa-infinity"
+    },
+    {
+      "id": "computacion-cuantica-ia",
+      "titulo": "Computación Cuántica para IA",
+      "imagen": "assets/images/articulo_computacion_cuantica.png",
+      "descripcion": "La nueva generación de algoritmos cuánticos promete acelerar el entrenamiento y la optimización de modelos de inteligencia artificial.",
+      "valorPositivo": "La computación cuántica aplicada a la IA permitirá resolver problemas actualmente imposibles de abordar, como el diseño de nuevos medicamentos a nivel molecular, la optimización de redes energéticas a escala nacional, y la predicción precisa de fenómenos naturales complejos.",
+      "usoComun": "Para el usuario común, los beneficios se traducen en servicios más rápidos y precisos: navegación GPS que predice tráfico en tiempo real con mayor exactitud, asistentes financieros que optimizan inversiones considerando millones de variables simultáneamente, y sistemas de recomendación que entienden tus preferencias con una profundidad sin precedentes.",
+      "casosUso": [
+        "Descubrimiento de fármacos: Simulación de interacciones moleculares para reducir el tiempo de desarrollo de nuevos medicamentos de años a semanas",
+        "Optimización logística: Cálculo de rutas de entrega perfectamente eficientes para empresas de e-commerce, reduciendo costos y emisiones",
+        "Modelado climático: Predicción precisa de patrones climáticos a largo plazo para mejor preparación ante desastres naturales"
+      ],
+      "buenasPracticas": "Aprovecha los servicios cuánticos mejorados cuando estén disponibles en plataformas que ya usas. Por ejemplo, usa los modos de navegación avanzada en aplicaciones de mapas, o las funciones de optimización financiera en tus apps de banca. Estas mejoras sutiles hacen tu vida más eficiente sin que necesites entender los complejos procesos cuánticos detrás.",
+      "categoria": "tecnologia",
+      "fecha": "2025-10-22",
+      "icono": "fa-atom"
+    },
+    {
+      "id": "etica-ia",
+      "titulo": "Ética en la Inteligencia Artificial",
+      "imagen": "assets/images/articulo_etica_ia.png",
+      "descripcion": "Principios y marcos regulatorios para desarrollar IA responsable, transparente y centrada en las personas.",
+      "valorPositivo": "La ética en IA garantiza que la tecnología se desarrolle de manera inclusiva y beneficiosa para toda la sociedad, promoviendo la equidad, la transparencia y la responsabilidad en sistemas que toman decisiones importantes affecting vidas humanas.",
+      "usoComun": "Como usuario, puedes tomar decisiones éticas informadas: elige plataformas que expliquen claramente cómo usan tus datos, apoya servicios que demuestren transparencia en sus algoritmos, y educa a otros sobre la importancia de la IA ética. También puedes usar herramientas que detectan y reportan sesgos en contenido generado por IA.",
+      "casosUso": [
+        "Herramientas de detección de sesgos: Aplicaciones que identifican prejuicios en textos o imágenes generadas por IA para promover contenido más equitativo",
+        "Plataformas de IA transparente: Servicios que explican sus decisiones y permiten a los usuarios entender y cuestionar los resultados",
+        "Sistemas de auditoría ética: Herramientas que las empresas pueden usar para evaluar si sus sistemas IA cumplen con estándares éticos internacionales"
+      ],
+      "buenasPracticas": "Sé consciente del impacto de tus interacciones con sistemas IA. Questiona las recomendaciones que parecen sesgadas, reporta contenido inapropiado, y elige servicios que valoran tu privacidad y autonomía. Tu participación activa ayuda a construir un ecosistema de IA más ético y responsable.",
+      "categoria": "etica",
+      "fecha": "2025-08-12",
+      "icono": "fa-balance-scale"
+    },
+    {
+      "id": "futuro-trabajo",
+      "titulo": "El Futuro del Trabajo en la Era de la IA",
+      "imagen": "assets/images/articulo_futuro_trabajo.png",
+      "descripcion": "Habilidades del mañana, empleos emergentes y estrategias para una colaboración efectiva entre humanos y máquinas.",
+      "valorPositivo": "La IA está transformando el trabajo eliminando tareas repetitivas y peligrosas, permitiendo que los humanos se enfoquen en trabajo creativo, estratégico y emocionalmente significativo. Esta evolución está creando nuevos tipos de empleos y haciendo que el trabajo sea más seguro y satisfactorio.",
+      "usoComun": "Prepárate para el futuro laboral mediante el upskilling continuo: usa herramientas de aprendizaje IA para adquirir nuevas habilidades, colabora con asistentes IA para aumentar tu productividad, y desarrolla habilidades que la IA no puede replicar como empatía, creatividad y pensamiento crítico complejo.",
+      "casosUso": [
+        "Asistentes de productividad: Herramientas IA que automatizan tareas administrativas, permitiéndote concentrarte en trabajo estratégico y creativo",
+        "Plataformas de aprendizaje adaptativo: Sistemas que personalizan tu desarrollo profesional basándose en tus fortalezas y objetivos de carrera",
+        "Colaboración humano-IA: Proyectos donde la IA maneja análisis de datos mientras los humanos aportan juicio estratégico y visión creativa"
+      ],
+      "buenasPracticas": "Abraza la colaboración con IA como una oportunidad para crecer profesionalmente. Dedica tiempo regularmente a aprender nuevas herramientas y habilidades, mantén una mentalidad de aprendizaje continuo, y considera cómo la IA puede potenciar tus fortalezas únicas en lugar de verla como una amenaza.",
+      "categoria": "trabajo",
+      "fecha": "2025-09-08",
+      "icono": "fa-briefcase"
+    },
+    {
+      "id": "ia-cambio-climatico",
+      "titulo": "IA en la Lucha contra el Cambio Climático",
+      "imagen": "assets/images/articulo_cambio_climatico.png",
+      "descripcion": "Tecnologías inteligentes para optimizar energías renovables, proteger ecosistemas y reducir emisiones globales.",
+      "valorPositivo": "La IA está acelerando la transición hacia un futuro sostenible al optimizar el uso de energías renovables, predecir patrones climáticos extremos, y desarrollar soluciones innovadoras para captura de carbono y conservación de ecosistemas.",
+      "usoComun": "Contribuye personalmente usando aplicaciones que optimizan tu consumo energético, participando en proyectos ciudadanos de ciencia climática asistida por IA, y utilizando servicios que calculan y compensan tu huella de carbono. También puedes apoyar empresas que usan IA para operaciones sostenibles.",
+      "casosUso": [
+        "Optimización energética: Sistemas IA que gestionan redes eléctricas inteligentes, maximizando el uso de energía renovable y minimizando desperdicios",
+        "Monitoreo forestal: Drones y satélites con IA que detectan deforestación ilegal y riesgos de incendios en tiempo real",
+        "Agricultura de precisión: Sistemas que optimizan el uso de agua y fertilizantes, reduciendo el impacto ambiental mientras aumentan la producción de alimentos"
+      ],
+      "buenasPracticas": "Usa tecnología inteligente para reducir tu impacto ambiental. Instala aplicaciones que optimizan tu consumo energético en casa, elige servicios con cálculo de huella de carbono incorporado, y participa en plataformas ciudadanas que contribuyen a la investigación climática usando el poder de tu dispositivo.",
+      "categoria": "sostenibilidad",
+      "fecha": "2025-11-05",
+      "icono": "fa-leaf"
+    },
+    {
+      "id": "ia-generativa-creatividad",
+      "titulo": "IA Generativa y Creatividad",
+      "imagen": "assets/images/articulo_ia_generativa.png",
+      "descripcion": "Cómo los modelos generativos están transformando el arte, la música y la escritura a través de la co-creación humano-máquina.",
+      "valorPositivo": "La IA generativa está democratizando la creatividad, permitiendo que personas sin formación técnica puedan expresar sus ideas artísticas, superar bloqueos creativos, y explorar nuevas formas de expresión que antes eran imposibles o requerían años de práctica.",
+      "usoComun": "Usa herramientas generativas como inspiración creativa: genera ideas para proyectos, crea bocetos iniciales, experimenta con diferentes estilos artísticos, o usa la IA para superar el miedo a la página en blanco. La IA es tu colaboradora creativa, no tu reemplazo.",
+      "casosUso": [
+        "Escritura asistida: Herramientas que sugieren ideas, estructuras y mejoras cuando te quedas bloqueado escribiendo artículos o historias",
+        "Diseño visual: Generadores de imágenes que crean conceptos visuales para proyectos, presentaciones o contenido de redes sociales",
+        "Música personalizada: Compositores IA que crean bandas sonoras únicas para videos, podcasts o proyectos personales"
+      ],
+      "buenasPracticas": "Usa la IA generativa como una herramienta de inspiración y experimentación, no como un atajo que reemplaza tu creatividad. Aprende a dar buenos prompts, edita y personaliza los resultados, y siempre considera las implicaciones éticas de usar contenido generado por IA en tus proyectos profesionales.",
+      "categoria": "creatividad",
+      "fecha": "2025-10-15",
+      "icono": "fa-palette"
+    },
+    {
+      "id": "neurociencia-artificial",
+      "titulo": "Neurociencia Artificial",
+      "imagen": "assets/images/articulo_neurociencia.png",
+      "descripcion": "Interfaces cerebro-computadora que amplifican las capacidades humanas y redefinen la rehabilitación neurológica.",
+      "valorPositivo": "La neurociencia artificial está revolucionando la medicina al restaurar funciones perdidas por lesiones o enfermedades, permitiendo que personas con parálisis controlen prótesis con su mente, y desarrollando tratamientos personalizados para condiciones neurológicas.",
+      "usoComun": "Aunque las interfaces cerebro-computadora avanzadas aún están en desarrollo, ya puedes beneficiarte de tecnologías neurotecnológicas más accesibles: aplicaciones de meditación con biofeedback, dispositivos de seguimiento del sueño que optimizan tu descanso, y herramientas de concentración que usan neurociencia para mejorar tu productividad.",
+      "casosUso": [
+        "Rehabilitación motora: Sistemas que ayudan a pacientes con accidentes cerebrovasculares a recuperar el control muscular mediante retroalimentación cerebral",
+        "Comunicación asistida: Interfaces que permiten a personas con parálisis comunicarse usando solo sus pensamientos",
+        "Mejora cognitiva: Aplicaciones que usan neurofeedback para ayudar a mejorar la concentración, memoria y control del estrés"
+      ],
+      "buenasPracticas": "Explora tecnologías de bienestar mental basadas en neurociencia como complemento a prácticas saludables tradicionales. Usa aplicaciones de meditación con biofeedback, sigue patrones de sueño para optimizar tu descanso, y considera dispositivos de concentración que se adapten a tu estado mental, pero siempre prioriza tu bienestar integral y consulta profesionales cuando sea necesario.",
+      "categoria": "salud",
+      "fecha": "2025-09-20",
+      "icono": "fa-brain"
+    },
+    {
+      "id": "privacidad-era-ia",
+      "titulo": "Privacidad en la Era de la IA",
+      "imagen": "assets/images/articulo_privacidad_ia.png",
+      "descripcion": "Amenazas, regulaciones y herramientas para proteger nuestros datos en un mundo hiperconectado.",
+      "valorPositivo": "La IA también está siendo usada para proteger la privacidad mediante sistemas avanzados de detección de intrusiones, encriptación cuántica, y herramientas que identifican vulnerabilidades de seguridad antes de que puedan ser explotadas, creando un internet más seguro para todos.",
+      "usoComun": "Protege tu privacidad usando herramientas impulsadas por IA: gestores de contraseñas con análisis de seguridad, sistemas que detectan phishing y malware en tiempo real, y aplicaciones que monitorean el uso de tus datos y te alertan sobre posibles brechas de privacidad.",
+      "casosUso": [
+        "Seguridad inteligente: Antivirus y firewalls con IA que aprenden y se adaptan a nuevas amenazas en tiempo real",
+        "Gestión de privacidad: Herramientas que automatizan la configuración de ajustes de privacidad en múltiples plataformas",
+        "Detección de deepfakes: Sistemas IA que identifican contenido manipulado para proteger contra desinformación y fraude"
+      ],
+      "buenasPracticas": "Mantente informado sobre las herramientas de privacidad disponibles y úsalas activamente. Revisa regularmente los permisos de tus aplicaciones, usa autenticación de múltiples factores cuando esté disponible, y considera servicios de monitoreo de privacidad que usen IA para detectar usos no autorizados de tu información personal.",
+      "categoria": "seguridad",
+      "fecha": "2025-11-18",
+      "icono": "fa-shield-alt"
+    }
+  ],
+  "categorias": {
+    "futuro": {
+      "nombre": "Futuro de la IA",
+      "color": "#9333ea",
+      "icono": "fa-infinity"
+    },
+    "tecnologia": {
+      "nombre": "Tecnología Avanzada",
+      "color": "#3b82f6",
+      "icono": "fa-microchip"
+    },
+    "etica": {
+      "nombre": "Ética y Sociedad",
+      "color": "#ef4444",
+      "icono": "fa-balance-scale"
+    },
+    "trabajo": {
+      "nombre": "Futuro Laboral",
+      "color": "#f59e0b",
+      "icono": "fa-briefcase"
+    },
+    "sostenibilidad": {
+      "nombre": "Sostenibilidad",
+      "color": "#10b981",
+      "icono": "fa-leaf"
+    },
+    "creatividad": {
+      "nombre": "Creatividad",
+      "color": "#ec4899",
+      "icono": "fa-palette"
+    },
+    "salud": {
+      "nombre": "Salud y Bienestar",
+      "color": "#06b6d4",
+      "icono": "fa-heart"
+    },
+    "seguridad": {
+      "nombre": "Seguridad Digital",
+      "color": "#6366f1",
+      "icono": "fa-shield-alt"
+    }
+  }
+}

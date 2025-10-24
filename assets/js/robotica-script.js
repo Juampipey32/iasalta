@@ -1,0 +1,431 @@
+// JavaScript para la página de Robótica - JUAMPI IA
+
+// Configuración y constantes
+const CONFIG = {
+    counters: {
+        robotsCount: { target: 3.5, suffix: '', duration: 2000 },
+        marketValue: { target: 250, suffix: '', duration: 2500 },
+        jobsCreated: { target: 85, suffix: '', duration: 1800 },
+        efficiency: { target: 450, suffix: '', duration: 2200 }
+    },
+    socialLinks: {
+        twitter: 'https://twitter.com/juampi_ia',
+        github: 'https://github.com/juampi-ia',
+        linkedin: 'https://linkedin.com/in/juampi-ia'
+    },
+    animations: {
+        observerThreshold: 0.1,
+        counterDelay: 100
+    }
+};
+
+// Clase principal para manejar la página de robótica
+class RoboticaPage {
+    constructor() {
+        this.counters = new Map();
+        this.observer = null;
+        this.init();
+    }
+
+    init() {
+        this.setupEventListeners();
+        this.setupCounters();
+        this.setupIntersectionObserver();
+        this.setupSocialLinks();
+        this.loadHeader();
+    }
+
+    // Configurar event listeners
+    setupEventListeners() {
+        document.addEventListener('DOMContentLoaded', () => {
+            this.initializeAnimations();
+        });
+
+        window.addEventListener('load', () => {
+            this.handlePageLoad();
+        });
+    }
+
+    // Cargar header dinámicamente
+    loadHeader() {
+        const headerContainer = document.getElementById('header-container');
+        if (headerContainer) {
+            fetch('templates/header.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                    this.initializeHeaderScripts();
+                })
+                .catch(error => {
+                    console.error('Error loading header:', error);
+                    this.createFallbackHeader();
+                });
+        }
+    }
+
+    // Crear header fallback si la carga falla
+    createFallbackHeader() {
+        const headerContainer = document.getElementById('header-container');
+        if (headerContainer) {
+            headerContainer.innerHTML = `
+                <header class="header-retro">
+                    <nav class="nav-terminal">
+                        <div class="container mx-auto px-4">
+                            <div class="flex flex-wrap justify-center items-center">
+                                <div class="logo-retro mr-8">
+                                    <div class="status-indicator status-online"></div>
+                                    <span class="text-white digital-font text-lg">JUAMPI IA</span>
+                                </div>
+                                <div class="nav-links flex flex-wrap justify-center">
+                                    <a href="index.html" class="nav-link">
+                                        <i class="fas fa-home mr-2"></i>INICIO
+                                    </a>
+                                    <a href="robotica.html" class="nav-link active">
+                                        <i class="fas fa-robot mr-2"></i>ROBÓTICA
+                                    </a>
+                                    <a href="contacto.html" class="nav-link">
+                                        <i class="fas fa-terminal mr-2"></i>CONTACTO
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            `;
+        }
+    }
+
+    // Inicializar scripts del header
+    initializeHeaderScripts() {
+        // Inicializar efectos del header si están disponibles
+        if (typeof init3D === 'function') {
+            init3D();
+        }
+        if (typeof initMatrixRain === 'function') {
+            initMatrixRain();
+        }
+        if (typeof updateTime === 'function') {
+            updateTime();
+            setInterval(updateTime, 1000);
+        }
+        if (typeof setPageTitle === 'function') {
+            setPageTitle();
+        }
+    }
+
+    // Configurar contadores animados
+    setupCounters() {
+        Object.keys(CONFIG.counters).forEach(key => {
+            const config = CONFIG.counters[key];
+            this.counters.set(key, {
+                ...config,
+                element: document.getElementById(key),
+                animated: false
+            });
+        });
+    }
+
+    // Configurar Intersection Observer para animaciones
+    setupIntersectionObserver() {
+        this.observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.handleElementIntersect(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: CONFIG.animations.observerThreshold,
+                rootMargin: '50px'
+            }
+        );
+
+        // Observar elementos para animación
+        document.querySelectorAll('.stat-card, .robot-category, .showcase-item').forEach(el => {
+            this.observer.observe(el);
+        });
+    }
+
+    // Manejar intersección de elementos
+    handleElementIntersect(element) {
+        if (element.classList.contains('stat-card')) {
+            this.animateCounters();
+        } else if (element.classList.contains('robot-category') || element.classList.contains('showcase-item')) {
+            this.addRevealAnimation(element);
+        }
+    }
+
+    // Animar contadores
+    animateCounters() {
+        this.counters.forEach((config, key) => {
+            if (!config.animated && config.element) {
+                this.animateCounter(config);
+                config.animated = true;
+            }
+        });
+    }
+
+    // Animar un contador específico
+    animateCounter(config) {
+        const { element, target, suffix, duration } = config;
+        if (!element) return;
+
+        const startTime = performance.now();
+        const startValue = 0;
+        const isDecimal = target % 1 !== 0;
+
+        const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Función de easing para suavizar la animación
+            const easeOutQuad = 1 - Math.pow(1 - progress, 2);
+            const currentValue = startValue + (target - startValue) * easeOutQuad;
+
+            // Formatear el valor
+            const displayValue = isDecimal ? currentValue.toFixed(1) : Math.floor(currentValue);
+            element.textContent = displayValue + suffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                element.textContent = target + suffix;
+                this.addCounterCompleteEffect(element);
+            }
+        };
+
+        requestAnimationFrame(animate);
+    }
+
+    // Efecto de completado para contadores
+    addCounterCompleteEffect(element) {
+        element.style.animation = 'pulse 0.5s ease-in-out';
+        setTimeout(() => {
+            element.style.animation = '';
+        }, 500);
+    }
+
+    // Configurar enlaces sociales
+    setupSocialLinks() {
+        const socialLinks = document.querySelectorAll('.footer-links a[href="#"]');
+        socialLinks.forEach(link => {
+            const icon = link.querySelector('i');
+            if (icon) {
+                if (icon.classList.contains('fa-twitter')) {
+                    link.href = CONFIG.socialLinks.twitter;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                } else if (icon.classList.contains('fa-github')) {
+                    link.href = CONFIG.socialLinks.github;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                } else if (icon.classList.contains('fa-linkedin')) {
+                    link.href = CONFIG.socialLinks.linkedin;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                }
+            }
+        });
+    }
+
+    // Inicializar animaciones
+    initializeAnimations() {
+        // Animar elementos con retraso
+        document.querySelectorAll('.robot-category, .showcase-item').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+
+            setTimeout(() => {
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    }
+
+    // Agregar animación de revelación
+    addRevealAnimation(element) {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+
+        setTimeout(() => {
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }, CONFIG.animations.counterDelay);
+    }
+
+    // Manejar carga de página
+    handlePageLoad() {
+        // Inicializar tooltips si existen
+        this.initializeTooltips();
+
+        // Inicializar eventos de interacción
+        this.setupInteractiveElements();
+
+        // Agregar efectos hover mejorados
+        this.enhanceHoverEffects();
+    }
+
+    // Inicializar tooltips
+    initializeTooltips() {
+        const tooltipElements = document.querySelectorAll('[data-tooltip]');
+        tooltipElements.forEach(el => {
+            el.addEventListener('mouseenter', (e) => {
+                this.showTooltip(e.target);
+            });
+            el.addEventListener('mouseleave', (e) => {
+                this.hideTooltip(e.target);
+            });
+        });
+    }
+
+    // Mostrar tooltip
+    showTooltip(element) {
+        const tooltip = document.createElement('div');
+        tooltip.className = 'tooltip';
+        tooltip.textContent = element.getAttribute('data-tooltip');
+        tooltip.style.cssText = `
+            position: absolute;
+            background: rgba(0, 255, 255, 0.9);
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            pointer-events: none;
+            white-space: nowrap;
+        `;
+
+        document.body.appendChild(tooltip);
+
+        const rect = element.getBoundingClientRect();
+        tooltip.style.left = rect.left + rect.width / 2 - tooltip.offsetWidth / 2 + 'px';
+        tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px';
+
+        element._tooltip = tooltip;
+    }
+
+    // Ocultar tooltip
+    hideTooltip(element) {
+        if (element._tooltip) {
+            element._tooltip.remove();
+            delete element._tooltip;
+        }
+    }
+
+    // Configurar elementos interactivos
+    setupInteractiveElements() {
+        // Botones de compartir
+        const shareButtons = document.querySelectorAll('.share-btn');
+        shareButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                this.handleShare(e.target);
+            });
+        });
+
+        // Enlaces de categorías
+        const categoryLinks = document.querySelectorAll('.robot-category');
+        categoryLinks.forEach(category => {
+            category.addEventListener('click', (e) => {
+                this.handleCategoryClick(e.currentTarget);
+            });
+        });
+    }
+
+    // Manejar compartir
+    handleShare(button) {
+        const url = window.location.href;
+        const title = document.title;
+
+        if (navigator.share) {
+            navigator.share({
+                title: title,
+                url: url
+            }).catch(console.error);
+        } else {
+            // Fallback: copiar al portapapeles
+            navigator.clipboard.writeText(url).then(() => {
+                this.showNotification('¡Enlace copiado al portapapeles!');
+            });
+        }
+    }
+
+    // Manejar click en categoría
+    handleCategoryClick(category) {
+        const title = category.querySelector('.robot-title').textContent;
+        this.showNotification(`Explorando: ${title}`);
+
+        // Aquí podrías agregar navegación a una página específica de la categoría
+        console.log(`Categoría seleccionada: ${title}`);
+    }
+
+    // Mejorar efectos hover
+    enhanceHoverEffects() {
+        const cards = document.querySelectorAll('.robot-category, .showcase-item, .stat-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', (e) => {
+                this.addHoverEffect(e.currentTarget);
+            });
+            card.addEventListener('mouseleave', (e) => {
+                this.removeHoverEffect(e.currentTarget);
+            });
+        });
+    }
+
+    // Agregar efecto hover
+    addHoverEffect(element) {
+        element.style.transform = 'translateY(-5px) scale(1.02)';
+        element.style.boxShadow = '0 10px 30px rgba(0, 255, 255, 0.3)';
+    }
+
+    // Remover efecto hover
+    removeHoverEffect(element) {
+        element.style.transform = 'translateY(0) scale(1)';
+        element.style.boxShadow = '';
+    }
+
+    // Mostrar notificación
+    showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 255, 255, 0.9);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: 'Share Tech Mono', monospace;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        `;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        }, 3000);
+    }
+}
+
+// Inicializar la página cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    new RoboticaPage();
+});
+
+// Exportar para uso en otros módulos si es necesario
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = RoboticaPage;
+}

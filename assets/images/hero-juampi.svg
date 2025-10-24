@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustracion circular de JUAMPI IA</title>
+  <desc id="desc">Retrato geometrico neon dentro de un circulo futurista con circuitos.</desc>
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#091931"/>
+      <stop offset="60%" stop-color="#040b19"/>
+      <stop offset="100%" stop-color="#02060f"/>
+    </radialGradient>
+    <linearGradient id="strokePrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffff"/>
+      <stop offset="45%" stop-color="#ff00ff"/>
+      <stop offset="100%" stop-color="#ffff00"/>
+    </linearGradient>
+    <linearGradient id="glowStroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff00ff" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="url(#bgGradient)"/>
+  <g filter="url(#softGlow)">
+    <circle cx="256" cy="256" r="212" fill="#071225" stroke="#0ff" stroke-opacity="0.1" stroke-width="4"/>
+    <circle cx="256" cy="256" r="222" fill="none" stroke="#fff" stroke-width="8" stroke-opacity="0.9"/>
+    <circle cx="256" cy="256" r="234" fill="none" stroke="#0ff" stroke-width="2" stroke-opacity="0.35" stroke-dasharray="14 12"/>
+  </g>
+  <g stroke="url(#strokePrimary)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M256 124c-64 0-118 54-118 122v42c0 62-23 96-23 96 44 60 88 88 141 88s97-28 141-88c0 0-23-34-23-96v-42c0-68-54-122-118-122z"/>
+    <path d="M190 262c26-20 48-30 66-30s40 10 66 30"/>
+    <path d="M214 214c14-10 28-16 42-16s28 6 42 16"/>
+    <path d="M214 332c20 16 40 24 42 24s22-8 42-24"/>
+    <path d="M256 226c-4 14-4 36 0 60"/>
+    <path d="M234 286c10 12 22 18 22 18s12-6 22-18"/>
+    <path d="M226 244c-2 12-2 24 0 32"/>
+    <path d="M286 244c2 12 2 24 0 32"/>
+    <path d="M214 210c-6-16-4-36 6-52 10-16 28-28 36-28" opacity="0.7"/>
+    <path d="M298 210c6-16 4-36-6-52s-28-28-36-28" opacity="0.7"/>
+    <path d="M230 356c8 18 14 34 26 34s18-16 26-34" opacity="0.85"/>
+  </g>
+  <g stroke="#00f0ff" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M170 180h-34m34 0c4-16 10-30 18-42m0 0l-28-24"/>
+    <path d="M342 138l26-32m0 0 34 24m-60-24c10 16 18 34 22 54"/>
+    <path d="M360 330h40m-40 0c-10 30-30 58-54 78"/>
+    <path d="M152 324h-46m46 0c12 34 30 64 56 86"/>
+    <path d="M256 120V86m0 40c18-14 38-22 60-22"/>
+    <path d="M256 120c-18-14-38-22-60-22"/>
+  </g>
+  <g fill="#00f0ff" fill-opacity="0.7">
+    <circle cx="146" cy="180" r="5"/>
+    <circle cx="398" cy="132" r="5"/>
+    <circle cx="396" cy="330" r="5"/>
+    <circle cx="138" cy="324" r="5"/>
+    <circle cx="256" cy="86" r="5"/>
+  </g>
+  <g fill="#ff4ffd" fill-opacity="0.6">
+    <circle cx="180" cy="138" r="4"/>
+    <circle cx="416" cy="170" r="4"/>
+    <circle cx="352" cy="370" r="4"/>
+    <circle cx="188" cy="378" r="4"/>
+  </g>
+  <g stroke="url(#glowStroke)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M204 266l-24 54 48 36-18 28" opacity="0.6"/>
+    <path d="M308 266l24 54-48 36 18 28" opacity="0.6"/>
+    <path d="M228 188l28 18 28-18" opacity="0.75"/>
+    <path d="M236 318l20 12 20-12" opacity="0.75"/>
+  </g>
+</svg>
