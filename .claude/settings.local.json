@@ -19,7 +19,9 @@
       "Bash(findstr:*)",
       "Bash(start \"C:\\Users\\JUAMPINOTE\\Desktop\\ia-salta\\contacto.html\")",
       "Bash(start \"C:\\Users\\JUAMPINOTE\\Desktop\\ia-salta\\testing-manual.html\")",
-      "Bash(start \"C:\\Users\\JUAMPINOTE\\Desktop\\ia-salta\\contacto.html?validate=true\")"
+      "Bash(start \"C:\\Users\\JUAMPINOTE\\Desktop\\ia-salta\\contacto.html?validate=true\")",
+      "Bash(git pull:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []

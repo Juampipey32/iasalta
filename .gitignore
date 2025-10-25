@@ -93,3 +93,25 @@ temp/
 # FTP Configuration (NEVER commit credentials!)
 .env.ftp
 *.ftp
+
+# Testing and development files
+*-testing-*
+*-TESTING-*
+*testing-*
+*-validation-*
+*-VALIDATION-*
+*-fixes-temp.css
+*-resp-fixes.css
+*-corrections.md
+*-INSTRUCTIONS.md
+*-SUMMARY.md
+*-REPORT.md
+
+# Temporary images and files
+Generated Image*.png
+*-key
+*-temp.*
+
+# Development scripts
+deploy-manual.sh
+sync-hosting.sh
