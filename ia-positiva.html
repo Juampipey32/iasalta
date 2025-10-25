@@ -729,7 +729,6 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li><a href="ia-positiva.html" class="nav-link active">IA Positiva</a></li>
-                <li><a href="articulos-valor-positivo.html" class="nav-link">Artículos Destacados</a></li>
                 <li><a href="lo-basico-ia.html" class="nav-link">Lo Básico de IA</a></li>
                 <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
@@ -910,6 +909,7 @@
                 const articulosResponse = await fetch('assets/articulos-valor-positivo.json');
                 const articulosJson = await articulosResponse.json();
                 articulosData = articulosJson.articulos;
+                categoriasData = articulosJson.categorias;
 
                 // Inicializar con todo el contenido
                 filtrarContenido('all');
@@ -957,12 +957,17 @@
                             category: 'Noticia',
                             categoria: 'Noticias'
                         })),
-                        ...articulosData.map(articulo => ({
-                            ...articulo,
-                            type: 'article',
-                            category: 'Historia',
-                            categoria: 'Historias'
-                        }))
+                        ...articulosData.map(articulo => {
+                            const categoriaInfo = categoriasData[articulo.categoria];
+                            return {
+                                ...articulo,
+                                type: 'article',
+                                category: categoriaInfo ? categoriaInfo.nombre : 'Artículo',
+                                categoria: categoriaInfo ? categoriaInfo.nombre : 'Artículo',
+                                color: categoriaInfo ? categoriaInfo.color : '#667eea',
+                                icono: categoriaInfo ? categoriaInfo.icono : 'fa-book-open'
+                            };
+                        })
                     ];
             }
 
@@ -1083,8 +1088,8 @@
                 articlesGrid.innerHTML = paginatedArticles.map(articulo => `
                     <div class="news-card fade-in">
                         <div class="news-card-header">
-                            <div class="news-category">
-                                <i class="fas fa-book-open"></i>
+                            <div class="news-category" style="background: ${articulo.color || '#667eea'}20; color: ${articulo.color || '#667eea'};">
+                                <i class="fas ${articulo.icono || 'fa-book-open'}"></i>
                                 ${articulo.category}
                             </div>
                             <div class="news-date">
