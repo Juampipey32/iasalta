@@ -1,0 +1,69 @@
+name: 🚀 Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Permite ejecutar manualmente desde GitHub
+
+jobs:
+  deploy:
+    name: 🌐 Deploy to iasalta.socialsflow.io
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Para comparar cambios
+
+      - name: 🔍 Display deployment info
+        run: |
+          echo "🚀 Deploying to Production"
+          echo "📁 Branch: ${{ github.ref_name }}"
+          echo "👤 Triggered by: ${{ github.actor }}"
+          echo "📝 Commit: ${{ github.event.head_commit.message }}"
+
+      - name: 📤 Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.vscode/**
+            **/.DS_Store
+            **/README.md
+            **/DEPLOYMENT-README.md
+            **/*.md
+            .github/**
+          dangerous-clean-slate: false
+          dry-run: false
+
+      - name: ✅ Deployment complete
+        run: |
+          echo "✨ Deployment successful!"
+          echo "🌐 Site URL: https://iasalta.socialsflow.io"
+          echo "⏰ Deployed at: $(date)"
+
+      - name: 📊 Deployment Summary
+        if: success()
+        run: |
+          echo "## ✅ Deployment Successful! 🎉" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- 🌐 **Site**: [iasalta.socialsflow.io](https://iasalta.socialsflow.io)" >> $GITHUB_STEP_SUMMARY
+          echo "- 📝 **Commit**: ${{ github.event.head_commit.message }}" >> $GITHUB_STEP_SUMMARY
+          echo "- 👤 **By**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
+          echo "- ⏰ **Time**: $(date)" >> $GITHUB_STEP_SUMMARY
+
+      - name: ❌ Deployment Failed
+        if: failure()
+        run: |
+          echo "## ❌ Deployment Failed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Please check the logs above for details." >> $GITHUB_STEP_SUMMARY
+          exit 1
