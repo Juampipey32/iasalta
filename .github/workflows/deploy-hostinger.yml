@@ -1,0 +1,37 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Deploy to Hostinger via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./
+        server-dir: /public_html/
+        exclude: .git,.github,node_modules,*.md
+        exclude-glob: README.md,*.md,.git/**
+
+    - name: Notify deployment success
+      run: |
+        echo "✅ Deploy to Hostinger completed successfully!"
+        echo "🎉 Cumpleaños Tutu site is now live!"
+        echo "📱 All mobile fixes are deployed!"
+        echo "🔗 Check your site at: ${{ secrets.SITE_URL }}"
