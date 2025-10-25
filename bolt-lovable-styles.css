@@ -209,6 +209,7 @@ img {
 /* ============================================
    NAVIGATION (Hybrid - Performance + Design)
    ============================================ */
+.navbar,
 .modern-nav {
   position: fixed;
   top: 0;
@@ -232,6 +233,7 @@ img {
   margin: 0 auto;
 }
 
+.nav-logo,
 .modern-logo {
   display: flex;
   align-items: center;
@@ -243,10 +245,12 @@ img {
   transition: color var(--transition-fast);
 }
 
+.nav-logo:hover,
 .modern-logo:hover {
   color: var(--primary-600);
 }
 
+.nav-logo img,
 .modern-logo img {
   width: 40px;
   height: 40px;
@@ -903,6 +907,42 @@ img {
   .social-links {
     justify-content: center;
   }
+
+  /* ============================================
+     RESPONSIVE FORMS - Tablets y Móviles
+     ============================================ */
+  .contact-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+
+  .form-row-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .modern-card {
+    padding: var(--space-4) !important;
+  }
+
+  .form-buttons {
+    flex-direction: column !important;
+  }
+
+  .form-buttons button {
+    width: 100% !important;
+    margin-bottom: var(--space-2);
+  }
+
+  /* Inputs accesibles para móvil */
+  input, textarea, select {
+    min-height: 48px;
+    padding: var(--space-2) var(--space-3) !important;
+  }
+
+  /* Ajustar espaciado del formulario */
+  .grid-container {
+    padding: 0 var(--space-4);
+  }
 }
 
 @media (max-width: 480px) {
@@ -933,6 +973,39 @@ img {
 
   .news-card-title {
     font-size: var(--text-xl);
+  }
+
+  /* ============================================
+     RESPONSIVE FORMS - Móviles Pequeños
+     ============================================ */
+  .modern-card {
+    padding: var(--space-3) !important;
+  }
+
+  /* Labels más pequeños */
+  label {
+    font-size: var(--text-sm) !important;
+  }
+
+  /* Inputs más compactos */
+  input, textarea, select {
+    padding: var(--space-2) var(--space-3) !important;
+    font-size: var(--text-sm) !important;
+  }
+
+  /* Botones del formulario */
+  .form-buttons button {
+    padding: var(--space-3) var(--space-4) !important;
+    font-size: var(--text-sm) !important;
+  }
+
+  /* Prevenir zoom en iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  textarea {
+    font-size: 16px !important;
   }
 }
 

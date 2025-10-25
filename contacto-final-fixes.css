@@ -1,0 +1,408 @@
+/* ============================================
+   CONTACTO.HTML - CORRECCIONES FINALES CRÍTICAS
+   Problemas identificados en testing completo
+   ============================================ */
+
+/* ============================================
+   CORRECCIÓN 1: VIEWPORT ULTRA-PEQUEÑO (<360px)
+   ============================================ */
+@media (max-width: 360px) {
+  /* Prevenir overflow horizontal */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  /* Grid de estadísticas ultra-compacto */
+  .hero-stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-2) !important;
+    margin: 0 !important;
+  }
+
+  .stat-item {
+    padding: var(--space-2) !important;
+    text-align: center !important;
+  }
+
+  .stat-number {
+    font-size: var(--text-xl) !important;
+    line-height: 1.2 !important;
+  }
+
+  .stat-label {
+    font-size: var(--text-xs) !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Grid de servicios ultra-compacto */
+  .news-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-3) !important;
+    margin: 0 !important;
+  }
+
+  .news-card {
+    padding: var(--space-3) !important;
+    margin-bottom: var(--space-3) !important;
+  }
+
+  .news-card-title {
+    font-size: var(--text-base) !important;
+    line-height: 1.3 !important;
+  }
+
+  .news-card-description {
+    font-size: var(--text-xs) !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Formulario ultra-compacto */
+  .contact-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-3) !important;
+    padding: 0 var(--space-2) !important;
+  }
+
+  .modern-card {
+    padding: var(--space-3) !important;
+  }
+
+  /* Inputs ultra-compactos pero accesibles */
+  input, textarea, select {
+    min-height: 44px !important; /* Mantener WCAG */
+    font-size: 16px !important; /* Prevenir zoom iOS */
+    padding: var(--space-2) !important;
+  }
+
+  /* Botones ultra-compactos */
+  .modern-button {
+    min-height: 44px !important; /* Mantener WCAG */
+    padding: var(--space-2) var(--space-3) !important;
+    font-size: var(--text-xs) !important;
+  }
+
+  /* Hero ultra-compacto */
+  .hero-premium {
+    padding: var(--space-6) var(--space-2) !important;
+  }
+
+  .hero-title {
+    font-size: var(--text-xl) !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-xs) !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Process grid ultra-compacto */
+  .process-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-3) !important;
+  }
+
+  /* Secciones ultra-compactas */
+  .section {
+    padding: var(--space-5) var(--space-2) !important;
+  }
+
+  .grid-container {
+    padding: 0 var(--space-2) !important;
+    max-width: 100% !important;
+  }
+
+  /* Feature lists ultra-compactas */
+  .feature-list li {
+    font-size: var(--text-xs) !important;
+    margin-bottom: var(--space-1) !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Comentarios ultra-compactos */
+  .comentario-item {
+    padding: var(--space-3) !important;
+  }
+
+  /* Navegación ultra-compacta */
+  .navbar {
+    padding: 0 var(--space-2) !important;
+  }
+
+  .nav-logo span {
+    display: none !important; /* Ocultar texto en modo ultra-compacto */
+  }
+
+  /* Footer ultra-compacto */
+  .modern-footer {
+    padding: var(--space-5) var(--space-2) !important;
+  }
+
+  .footer-section {
+    margin-bottom: var(--space-4) !important;
+  }
+}
+
+/* ============================================
+   CORRECCIÓN 2: PREVENCIÓN COMPLETA DE ELASTIC SCROLLING
+   ============================================ */
+
+/* Prevenir elastic scrolling en iOS Safari */
+body {
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: auto !important;
+}
+
+/* Contenedor principal con scroll controlado */
+main, .section {
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Prevenir pull-to-refresh en navegadores móviles */
+@media (max-width: 768px) {
+  body {
+    position: fixed !important;
+    width: 100% !important;
+    height: 100vh !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Contenedor de scroll */
+  .scroll-container {
+    height: 100vh !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+  }
+}
+
+/* ============================================
+   CORRECCIÓN 3: CONTENIDO CORTADO Y VISIBILITY ISSUES
+   ============================================ */
+
+/* Asegurar que todo el contenido sea visible */
+* {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Imágenes y videos responsivos */
+img, video, iframe {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Texto que no debe cortarse */
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+p, span, div {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+}
+
+/* Tablas responsivas */
+table {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  display: block !important;
+}
+
+/* Prevenir contenido cortado en contenedores */
+.container, .section, .grid-container, .modern-card, .news-card {
+  overflow-x: hidden !important;
+  overflow-wrap: break-word !important;
+}
+
+/* ============================================
+   CORRECCIÓN 4: MEJORAS DE ACCESSIBILITY Y FOCUS
+   ============================================ */
+
+/* Focus states mejorados y visibles */
+input:focus, textarea:focus, select:focus, button:focus, a:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  input, textarea, select, button, a {
+    border: 2px solid currentColor !important;
+  }
+
+  .modern-card, .news-card {
+    border: 2px solid currentColor !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   CORRECCIÓN 5: PERFORMANCE Y OPTIMIZACIÓN
+   ============================================ */
+
+/* Hardware acceleration para mejor performance */
+.hero-premium, .modern-card, .news-card, .stat-item {
+  transform: translateZ(0) !important;
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+  perspective: 1000px !important;
+}
+
+/* Optimización de animaciones para móviles */
+@media (max-width: 768px) {
+  .fade-in {
+    animation: fadeInSimple 0.3s ease forwards !important;
+  }
+
+  @keyframes fadeInSimple {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Deshabilitar animaciones complejas */
+  .hero-particles, .floating-animation {
+    display: none !important;
+  }
+}
+
+/* Lazy loading para imagenes */
+img {
+  loading: lazy !important;
+}
+
+/* ============================================
+   CORRECCIÓN 6: MEJORAS DE TOUCH Y GESTURES
+   ============================================ */
+
+/* Touch targets mejorados */
+@media (max-width: 768px) {
+  .modern-button, button, input, textarea, select, a {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* Prevenir double-tap zoom */
+  .modern-button, button {
+    touch-action: manipulation !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+  }
+}
+
+/* Active states táctiles */
+.modern-button:active, button:active {
+  transform: scale(0.98) !important;
+  transition: transform 0.1s ease !important;
+}
+
+/* ============================================
+   CORRECCIÓN 7: VIEWPORT Y ORIENTATION CHANGES
+   ============================================ */
+
+/* Manejo de cambios de orientación */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .hero-premium {
+    padding: var(--space-4) var(--space-2) !important;
+  }
+
+  .hero-title {
+    font-size: var(--text-2xl) !important;
+  }
+
+  .section {
+    padding: var(--space-4) var(--space-2) !important;
+  }
+}
+
+/* Viewport meta tag mejorado (si es posible modificar HTML) */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"> */
+
+/* ============================================
+   CORRECCIÓN 8: DEBUG Y TESTING
+   ============================================ */
+
+/* Debug mode para identificar problemas */
+.debug-mode * {
+  outline: 1px solid red !important;
+}
+
+.debug-grid .hero-stats-grid,
+.debug-grid .news-cards-grid,
+.debug-grid .contact-form-grid,
+.debug-grid .process-grid {
+  outline: 2px solid blue !important;
+}
+
+.debug-mobile .modern-button,
+.debug-mobile button,
+.debug-mobile input,
+.debug-mobile textarea {
+  outline: 2px solid green !important;
+}
+
+/* Indicador de tamaño de viewport */
+.viewport-indicator {
+  position: fixed !important;
+  top: 10px !important;
+  left: 10px !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  color: white !important;
+  padding: 5px 10px !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+  z-index: 10000 !important;
+  font-family: monospace !important;
+}
+
+/* ============================================
+   NOTAS DE IMPLEMENTACIÓN
+   ============================================ */
+
+/*
+Este archivo debe ser incluido DESPUÉS de contacto-responsive-fixes.css
+y DESPUÉS de bolt-lovable-styles.css para asegurar que las reglas
+sobreescriban correctamente los estilos existentes.
+
+Orden de inclusión recomendado:
+1. bolt-lovable-styles.css
+2. contacto-responsive-fixes.css
+3. contacto-final-fixes.css (este archivo)
+4. Scripts
+
+Testing recomendado en:
+- iPhone SE (375x667)
+- Samsung Galaxy S5 (360x640)
+- iPad (768x1024)
+- Android tablets variados
+- Navegadores: Chrome, Safari, Firefox, Edge
+
+Métricas de éxito:
+- Sin overflow horizontal en ningún dispositivo
+- Hit areas de 44px mínimo en móviles
+- Sin elastic scrolling
+- Todo contenido visible y accesible
+- Performance optimizada
+*/

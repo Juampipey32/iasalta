@@ -78,17 +78,17 @@
                             <i class="fas fa-home"></i>
                             Inicio
                         </a>
-                        <a href="curiosidades.html" class="glass-button" style="width: 100%;">
-                            <i class="fas fa-lightbulb"></i>
-                            Curiosidades
-                        </a>
                         <a href="ia-positiva.html" class="glass-button" style="width: 100%;">
                             <i class="fas fa-brain"></i>
                             IA Positiva
                         </a>
-                        <a href="robotica.html" class="glass-button" style="width: 100%;">
-                            <i class="fas fa-robot"></i>
-                            Robótica
+                        <a href="lo-basico-ia.html" class="glass-button" style="width: 100%;">
+                            <i class="fas fa-graduation-cap"></i>
+                            Lo Básico de IA
+                        </a>
+                        <a href="contacto.html" class="glass-button" style="width: 100%;">
+                            <i class="fas fa-comments"></i>
+                            Contacto
                         </a>
                     </div>
                 </div>
@@ -100,17 +100,21 @@
                         Páginas Populares
                     </h3>
                     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
-                        <a href="novedades.html" class="glass-tag">
+                        <a href="index.html" class="glass-tag">
                             <i class="fas fa-newspaper"></i>
-                            Novedades
+                            Inicio
+                        </a>
+                        <a href="ia-positiva.html" class="glass-tag">
+                            <i class="fas fa-heart"></i>
+                            IA Positiva
+                        </a>
+                        <a href="lo-basico-ia.html" class="glass-tag">
+                            <i class="fas fa-graduation-cap"></i>
+                            Lo Básico de IA
                         </a>
                         <a href="contacto.html" class="glass-tag">
                             <i class="fas fa-envelope"></i>
                             Contacto
-                        </a>
-                        <a href="articulos/neurociencia-artificial.html" class="glass-tag">
-                            <i class="fas fa-brain"></i>
-                            Neurociencia
                         </a>
                     </div>
                 </div>
@@ -167,8 +171,8 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="ia-positiva.html">IA Positiva</a></li>
-                    <li><a href="novedades.html">Novedades</a></li>
-                    <li><a href="curiosidades.html">Curiosidades</a></li>
+                    <li><a href="lo-basico-ia.html">Lo Básico de IA</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
 
@@ -211,28 +215,8 @@
     </style>
 
     <!-- JavaScript -->
+    <script src="assets/js/mobile-menu-unificado.js"></script>
     <script>
-        // Mobile menu toggle
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        mobileMenuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = mobileMenuToggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                const icon = mobileMenuToggle.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            });
-        });
-
         // Fun facts generator
         const funFacts = [
             "El término 'inteligencia artificial' fue acuñado en 1956 por John McCarthy.",
@@ -266,9 +250,7 @@
                 const pages = [
                     { url: 'index.html', keywords: ['inicio', 'principal', 'home'] },
                     { url: 'ia-positiva.html', keywords: ['ia positiva', 'positiva', 'beneficios', 'impacto'] },
-                    { url: 'novedades.html', keywords: ['novedades', 'noticias', 'news', 'actualidad'] },
-                    { url: 'curiosidades.html', keywords: ['curiosidades', 'datos', 'hechos', 'interesting'] },
-                    { url: 'robotica.html', keywords: ['robotica', 'robots', 'automatización', 'robot'] },
+                    { url: 'lo-basico-ia.html', keywords: ['basico', 'aprendizaje', 'conceptos', 'fundamentos'] },
                     { url: 'contacto.html', keywords: ['contacto', 'contact', 'email', 'mensaje'] }
                 ];
 
@@ -279,7 +261,7 @@
                 if (matchedPage) {
                     window.location.href = matchedPage.url;
                 } else {
-                    alert('No encontramos resultados para "' + searchTerm + '". Intenta con "curiosidades" o "ia positiva".');
+                    alert('No encontramos resultados para "' + searchTerm + '". Intenta con "ia positiva" o "lo básico de ia".');
                 }
             }
         });

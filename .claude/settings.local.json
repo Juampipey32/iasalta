@@ -12,7 +12,14 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(del:*)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(findstr:*)",
+      "Bash(start \"C:\\Users\\JUAMPINOTE\\Desktop\\ia-salta\\contacto.html\")",
+      "Bash(start \"C:\\Users\\JUAMPINOTE\\Desktop\\ia-salta\\testing-manual.html\")",
+      "Bash(start \"C:\\Users\\JUAMPINOTE\\Desktop\\ia-salta\\contacto.html?validate=true\")"
     ],
     "deny": [],
     "ask": []

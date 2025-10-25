@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Optimizado - Blog IA Positiva -->
-    <title>Blog IA Positiva | Noticias y Artículos que Transforman el Mundo - JUAMPI IA</title>
-    <meta name="description" content="Descubre las últimas noticias y artículos de IA con impacto positivo. Innovaciones en salud, educación, medio ambiente y tecnología que están transformando nuestra sociedad para mejor.">
-    <meta name="keywords" content="blog IA, noticias IA, artículos IA, IA positiva, innovación IA, tecnología responsable, impacto social IA">
+    <title>Blog IA Positiva | Noticias e Historias que Transforman el Mundo - JUAMPI IA</title>
+    <meta name="description" content="Descubre las últimas noticias e historias de IA con impacto positivo. Innovaciones en salud, educación, medio ambiente y tecnología que están transformando nuestra sociedad para mejor.">
+    <meta name="keywords" content="blog IA, noticias IA, historias IA, artículos IA, IA positiva, innovación IA, tecnología responsable, impacto social IA">
     <meta name="author" content="JUAMPI IA">
 
     <!-- Meta tags SEO -->
@@ -17,14 +17,14 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Blog IA Positiva | Noticias y Artículos con Impacto - JUAMPI IA">
-    <meta property="og:description" content="Descubre las últimas noticias y artículos de IA con impacto positivo real. Innovaciones que transforman el mundo.">
+    <meta property="og:title" content="Blog IA Positiva | Noticias e Historias con Impacto - JUAMPI IA">
+    <meta property="og:description" content="Descubre las últimas noticias e historias de IA con impacto positivo real. Innovaciones que transforman el mundo.">
     <meta property="og:image" content="assets/images/8be46b00-4882-4600-b720-4d76db9c35db.png">
     <meta property="og:url" content="https://juampi-ia.com/ia-positiva.html">
 
     <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Blog IA Positiva | Noticias y Artículos - JUAMPI IA">
+    <meta property="twitter:title" content="Blog IA Positiva | Noticias e Historias - JUAMPI IA">
     <meta property="twitter:description" content="Descubre cómo la IA está transformando positivamente nuestro mundo.">
 
     <link rel="icon" href="assets/images/logo_circle_gradient.svg" type="image/svg+xml">
@@ -729,9 +729,8 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
                 <li><a href="ia-positiva.html" class="nav-link active">IA Positiva</a></li>
-                <li><a href="articulos-valor-positivo.html" class="nav-link">Artículos con Valor</a></li>
                 <li><a href="lo-basico-ia.html" class="nav-link">Lo Básico de IA</a></li>
-                <li><a href="contacto.html" class="nav-link">Consultoría IA</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
 
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
@@ -751,11 +750,11 @@
             </div>
 
             <h1 class="blog-title">
-                Noticias y Artículos que Transforman el Mundo
+                Noticias e Historias que Transforman el Mundo
             </h1>
 
             <p class="blog-subtitle">
-                Descubre las últimas noticias y análisis profundos sobre cómo la inteligencia artificial
+                Descubre las últimas noticias e historias con análisis profundos sobre cómo la inteligencia artificial
                 está creando un impacto positivo real en nuestra sociedad.
             </p>
 
@@ -766,7 +765,7 @@
                 </div>
                 <div class="blog-stat-card">
                     <div class="stat-number">8</div>
-                    <div class="stat-label">Artículos con Valor</div>
+                    <div class="stat-label">Historias IA Positiva</div>
                 </div>
                 <div class="blog-stat-card">
                     <div class="stat-number">100%</div>
@@ -795,12 +794,12 @@
                 <i class="fas fa-newspaper"></i> Noticias
             </button>
             <button class="filter-tab" data-filter="articles">
-                <i class="fas fa-book-open"></i> Artículos
+                <i class="fas fa-book-open"></i> Historias
             </button>
         </div>
 
         <div class="search-container">
-            <input type="text" class="search-input" id="searchInput" placeholder="🔍 Buscar noticias, artículos o temas...">
+            <input type="text" class="search-input" id="searchInput" placeholder="🔍 Buscar noticias o historias...">
         </div>
     </div>
 
@@ -816,15 +815,15 @@
         </div>
     </section>
 
-    <!-- Artículos con Valor Positivo -->
+    <!-- Historias IA Positiva -->
     <section class="content-section" id="articulos-section">
         <div class="section-header">
-            <h2 class="section-title">📖 Artículos con Valor Positivo</h2>
+            <h2 class="section-title">📖 Historias IA Positiva</h2>
             <p class="section-subtitle">Análisis profundos con casos de uso prácticos y guías de aplicación</p>
         </div>
 
         <div class="content-grid" id="articlesGrid">
-            <!-- Los artículos se cargarán dinámicamente -->
+            <!-- Las historias se cargarán dinámicamente -->
         </div>
     </section>
 
@@ -834,6 +833,7 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="assets/js/mobile-menu-unificado.js"></script>
     <script>
         // Global variables
         let noticiasData = [];
@@ -852,33 +852,6 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        // Mobile menu toggle
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        if (mobileMenuToggle && navMenu) {
-            mobileMenuToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                const icon = mobileMenuToggle.querySelector('i');
-                if (icon) {
-                    icon.classList.toggle('fa-bars');
-                    icon.classList.toggle('fa-times');
-                }
-            });
-
-            const navLinks = navMenu.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    const icon = mobileMenuToggle.querySelector('i');
-                    if (icon) {
-                        icon.classList.add('fa-bars');
-                        icon.classList.remove('fa-times');
-                    }
-                });
-            });
-        }
 
         // Mapeo de imágenes existentes para noticias
         const imagenesNoticiasDisponibles = [
@@ -932,7 +905,7 @@
                     }
                 });
 
-                // Cargar artículos
+                // Cargar historias
                 const articulosResponse = await fetch('assets/articulos-valor-positivo.json');
                 const articulosJson = await articulosResponse.json();
                 articulosData = articulosJson.articulos;
@@ -971,8 +944,8 @@
                     filteredContent = articulosData.map(articulo => ({
                         ...articulo,
                         type: 'article',
-                        category: 'Artículo',
-                        categoria: 'Artículos'
+                        category: 'Historia',
+                        categoria: 'Historias'
                     }));
                     break;
                 default:
@@ -986,8 +959,8 @@
                         ...articulosData.map(articulo => ({
                             ...articulo,
                             type: 'article',
-                            category: 'Artículo',
-                            categoria: 'Artículos'
+                            category: 'Historia',
+                            categoria: 'Historias'
                         }))
                     ];
             }
@@ -1017,7 +990,7 @@
             const articlesGrid = document.getElementById('articlesGrid');
             const pagination = document.getElementById('pagination');
 
-            // Separar noticias y artículos
+            // Separar noticias e historias
             const noticias = filteredContent.filter(item => item.type === 'news');
             const articulos = filteredContent.filter(item => item.type === 'article');
 
@@ -1104,7 +1077,7 @@
                 noticiasGrid.innerHTML = '<div class="no-results"><i class="fas fa-newspaper"></i><h3>No hay noticias disponibles</h3></div>';
             }
 
-            // Renderizar artículos
+            // Renderizar historias
             if (paginatedArticles.length > 0) {
                 articlesGrid.innerHTML = paginatedArticles.map(articulo => `
                     <div class="news-card fade-in">
@@ -1164,7 +1137,7 @@
                     </div>
                 `).join('');
             } else {
-                articlesGrid.innerHTML = '<div class="no-results"><i class="fas fa-book-open"></i><h3>No hay artículos disponibles</h3></div>';
+                articlesGrid.innerHTML = '<div class="no-results"><i class="fas fa-book-open"></i><h3>No hay historias disponibles</h3></div>';
             }
 
             // Renderizar paginación
@@ -1245,3 +1218,9 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+

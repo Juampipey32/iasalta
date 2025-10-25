@@ -1,0 +1,399 @@
+/* ============================================
+   CONTACT PAGE RESPONSIVE FIXES
+   Soluciones específicas para problemas de layout en móvil
+   ============================================ */
+
+/* ============================================
+   TABLET BREAKPOINT (768px y menos)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Grid principal del formulario - pasar a 1 columna */
+  .contact-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+    padding: 0 var(--space-4) !important;
+  }
+
+  /* Grid de estadísticas - 2 columnas en tablet */
+  .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-4) !important;
+  }
+
+  /* Grid de proceso - 2 columnas en tablet */
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-6) !important;
+  }
+
+  /* Grid de testimonios - 2 columnas */
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-4) !important;
+  }
+
+  /* Form rows - 1 columna */
+  .form-row-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Cards con padding reducido */
+  .modern-card {
+    padding: var(--space-5) var(--space-4) !important;
+  }
+
+  /* Botones del formulario en columna */
+  .form-buttons {
+    flex-direction: column !important;
+    gap: var(--space-3) !important;
+  }
+
+  .form-buttons button {
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Secciones con padding optimizado */
+  .section {
+    padding: var(--space-8) var(--space-4) !important;
+  }
+
+  /* Hero adjustments */
+  .hero-premium {
+    padding: var(--space-12) var(--space-4) !important;
+  }
+
+  .hero-title {
+    font-size: var(--text-3xl) !important;
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-base) !important;
+  }
+
+  /* Stats adjustments */
+  .stat-item {
+    text-align: center !important;
+    padding: var(--space-4) !important;
+  }
+
+  /* Grid containers responsive */
+  .grid-container {
+    max-width: 100% !important;
+    padding: 0 var(--space-4) !important;
+  }
+
+  /* Services grid */
+  .news-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+
+  /* Comments section */
+  .comments-section {
+    padding: var(--space-8) var(--space-4) !important;
+  }
+}
+
+/* ============================================
+   MOBILE BREAKPOINT (480px y menos)
+   ============================================ */
+@media (max-width: 480px) {
+  /* Grid de estadísticas - 1 columna en móvil */
+  .hero-stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+  }
+
+  /* Grid de proceso - 1 columna en móvil */
+  .process-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-5) !important;
+  }
+
+  /* Grid de testimonios - 1 columna */
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Cards con padding mínimo */
+  .modern-card {
+    padding: var(--space-4) var(--space-3) !important;
+  }
+
+  /* Secciones con padding mínimo */
+  .section {
+    padding: var(--space-6) var(--space-3) !important;
+  }
+
+  /* Hero para móvil pequeño */
+  .hero-premium {
+    padding: var(--space-8) var(--space-3) !important;
+  }
+
+  .hero-title {
+    font-size: var(--text-2xl) !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-sm) !important;
+  }
+
+  /* Botones optimizados para móvil */
+  .modern-button {
+    padding: var(--space-3) var(--space-4) !important;
+    font-size: var(--text-sm) !important;
+    min-height: 44px !important;
+  }
+
+  /* Formularios optimizados */
+  .form-row-grid {
+    gap: var(--space-3) !important;
+  }
+
+  /* Inputs accesibles */
+  input, textarea, select {
+    min-height: 44px !important;
+    font-size: 16px !important; /* Previene zoom en iOS */
+    padding: var(--space-2) var(--space-3) !important;
+  }
+
+  /* Labels optimizados */
+  label {
+    font-size: var(--text-sm) !important;
+    margin-bottom: var(--space-1) !important;
+  }
+
+  /* Stats items compactos */
+  .stat-item {
+    padding: var(--space-3) !important;
+  }
+
+  .stat-number {
+    font-size: var(--text-2xl) !important;
+  }
+
+  /* Service cards compactos */
+  .news-card {
+    padding: var(--space-4) !important;
+  }
+
+  .news-card-title {
+    font-size: var(--text-lg) !important;
+  }
+
+  .news-card-description {
+    font-size: var(--text-sm) !important;
+  }
+
+  /* Comments form responsive */
+  .comments-form {
+    padding: var(--space-4) !important;
+  }
+
+  /* Grid containers */
+  .grid-container {
+    padding: 0 var(--space-3) !important;
+  }
+
+  /* Process steps compactos */
+  .process-step {
+    padding: var(--space-4) !important;
+  }
+
+  /* Testimonial cards */
+  .testimonial-card {
+    padding: var(--space-4) !important;
+  }
+
+  /* Feature lists compactas */
+  .feature-list li {
+    font-size: var(--text-sm) !important;
+    margin-bottom: var(--space-2) !important;
+  }
+}
+
+/* ============================================
+   SMALL MOBILE BREAKPOINT (360px y menos)
+   ============================================ */
+@media (max-width: 360px) {
+  /* Padding mínimo para pantallas muy pequeñas */
+  .section {
+    padding: var(--space-5) var(--space-2) !important;
+  }
+
+  .hero-premium {
+    padding: var(--space-6) var(--space-2) !important;
+  }
+
+  .modern-card {
+    padding: var(--space-3) var(--space-2) !important;
+  }
+
+  .grid-container {
+    padding: 0 var(--space-2) !important;
+  }
+
+  /* Fuentes más pequeñas */
+  .hero-title {
+    font-size: var(--text-xl) !important;
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-xs) !important;
+  }
+
+  .modern-button {
+    font-size: var(--text-xs) !important;
+    padding: var(--space-2) var(--space-3) !important;
+  }
+
+  /* Stats ultra compactos */
+  .stat-number {
+    font-size: var(--text-xl) !important;
+  }
+
+  .stat-label {
+    font-size: var(--text-xs) !important;
+  }
+
+  /* Service cards ultra compactos */
+  .news-card-title {
+    font-size: var(--text-base) !important;
+  }
+
+  .news-card-description {
+    font-size: var(--text-xs) !important;
+  }
+
+  /* Formularios ultra compactos */
+  input, textarea, select {
+    padding: var(--space-2) !important;
+  }
+
+  label {
+    font-size: var(--text-xs) !important;
+  }
+}
+
+/* ============================================
+   MEJORAS TÁCTILES Y ACCESIBILIDAD
+   ============================================ */
+
+/* Hit areas mínimas WCAG */
+.modern-button, input, textarea, select, button {
+  min-height: 44px !important;
+  min-width: 44px !important;
+  touch-action: manipulation !important;
+}
+
+/* Prevenir double-tap zoom */
+a, button, .clickable {
+  touch-action: manipulation !important;
+}
+
+/* Focus states mejorados */
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--primary-500) !important;
+  outline-offset: 2px !important;
+}
+
+/* Active states táctiles */
+.modern-button:active, button:active {
+  transform: scale(0.98) !important;
+  transition: transform 0.1s ease !important;
+}
+
+/* ============================================
+   PERFORMANCE Y OPTIMIZACIÓN
+   ============================================ */
+
+/* Hardware acceleration */
+.hero-premium, .modern-card, .news-card {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimización de scroll */
+body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Prevenir text selection accidental */
+.modern-button, button {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ============================================
+   CORRECCIONES ESPECÍFICAS
+   ============================================ */
+
+/* Corregir overflow horizontal */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Contenedores con overflow controlado */
+.container, .section, .grid-container {
+  overflow-x: hidden;
+}
+
+/* Imágenes responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablas responsive */
+table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Prevenir problemas con viewport */
+html, body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ============================================
+   IMPRESIÓN Y ACCESSIBILITY
+   ============================================ */
+
+@media print {
+  .modern-button, .form-buttons, .hero-buttons {
+    display: none !important;
+  }
+
+  .modern-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .modern-card {
+    border: 2px solid currentColor !important;
+  }
+
+  .modern-button {
+    border: 2px solid currentColor !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

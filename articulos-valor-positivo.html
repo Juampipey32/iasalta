@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Eliminada redirección automática - ahora fusionamos contenido con IA Positiva -->
 
     <!-- SEO Optimizado -->
-    <title>Artículos con Valor Positivo | IA que Transforma Vidas - JUAMPI IA</title>
+    <title>Historias IA Positiva | IA que Transforma Vidas - JUAMPI IA</title>
     <meta name="description" content="Descubre cómo la inteligencia artificial está transformando positivamente nuestra sociedad. Artículos con casos de uso prácticos y guías para aplicar IA en tu vida diaria.">
     <meta name="keywords"="IA positiva, artículos IA, casos de uso IA, aplicaciones prácticas IA, transformación digital">
     <meta name="author" content="JUAMPI IA">
@@ -17,7 +18,7 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Artículos con Valor Positivo | IA que Transforma Vidas - JUAMPI IA">
+    <meta property="og:title" content="Historias IA Positiva | IA que Transforma Vidas - JUAMPI IA">
     <meta property="og:description" content="Descubre el impacto positivo de la IA con casos de uso prácticos y guías para aplicar tecnología en tu vida diaria.">
     <meta property="og:image" content="assets/images/articulos-valor-positivo.png">
     <meta property="og:url" content="https://juampi-ia.com/articulos-valor-positivo.html">
@@ -410,23 +411,26 @@
     </style>
 </head>
 <body>
+    <div style="padding: 2rem; text-align: center; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+        <p style="font-size: 1.1rem;">Hemos movido nuestras historias de IA positiva.</p>
+        <p style="font-size: 1.1rem;">Si no eres redirigido automáticamente, visita <a href="ia-positiva.html">ia-positiva.html</a>.</p>
+    </div>
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <!-- Navegación Premium -->
-    <nav class="modern-nav">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="modern-logo">
+            <a href="index.html" class="nav-logo">
                 <img src="assets/images/logo_circle_gradient.svg" alt="JUAMPI IA Logo">
                 <span>JUAMPI IA</span>
             </a>
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li><a href="ia-positiva.html" class="nav-link active">IA Positiva</a></li>
-                <li><a href="articulos-valor-positivo.html" class="nav-link">Artículos con Valor</a></li>
+                <li><a href="ia-positiva.html" class="nav-link">IA Positiva</a></li>
                 <li><a href="lo-basico-ia.html" class="nav-link">Lo Básico de IA</a></li>
-                <li><a href="contacto.html" class="nav-link">Consultoría IA</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
 
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
@@ -435,7 +439,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Artículos con Valor Positivo -->
+    <!-- Hero Section - Historias IA Positiva -->
     <section class="valor-positivo-hero">
         <div class="hero-content-valor">
             <h1 class="hero-title-valor">
@@ -450,7 +454,7 @@
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="#articulos" class="modern-button">
                     <i class="fas fa-book-open"></i>
-                    Explorar Artículos
+                    Explorar Historias IA Positiva
                 </a>
                 <a href="contacto.html" class="modern-button secondary">
                     <i class="fas fa-comments"></i>
@@ -460,7 +464,7 @@
         </div>
     </section>
 
-    <!-- Sección Principal - Artículos con Valor Positivo -->
+    <!-- Sección Principal - Historias IA Positiva -->
     <section class="section" id="main-content">
         <div class="container">
             <div id="articulos">
@@ -514,7 +518,7 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="ia-positiva.html">IA Positiva</a></li>
                     <li><a href="lo-basico-ia.html">Lo Básico de IA</a></li>
-                    <li><a href="articulos-valor-positivo.html">Artículos con Valor</a></li>
+                    <li><a href="articulos-valor-positivo.html">Historias IA Positiva</a></li>
                 </ul>
             </div>
 
@@ -534,6 +538,7 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="assets/js/mobile-menu-unificado.js"></script>
     <script>
         let articulosData = [];
         let categoriasData = {};
@@ -722,23 +727,9 @@
             return date.toLocaleDateString('es-ES', opciones);
         }
 
-        // Mobile menu
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        if (mobileMenuToggle && navMenu) {
-            mobileMenuToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                const icon = mobileMenuToggle.querySelector('i');
-                if (icon) {
-                    icon.classList.toggle('fa-bars');
-                    icon.classList.toggle('fa-times');
-                }
-            });
-        }
-
         // Cargar artículos al iniciar
         document.addEventListener('DOMContentLoaded', cargarArticulos);
     </script>
 </body>
 </html>
+

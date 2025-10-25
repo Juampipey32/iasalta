@@ -12,6 +12,17 @@ const SITE_DATA = {
   featuredArticles: [
     {
       id: 1,
+      title: '🎉 ¡Feliz Cumpleaños Andrés "Tutu" Garrido! 🎂',
+      excerpt: 'Hoy celebramos la vida de un increíble profesor, empresario y familiar. Un apasionado del deporte que transforma vidas desde General Roca, Río Negro...',
+      category: 'Especial',
+      image: 'assets/images/andres-garrido-birthday.png',
+      date: '2025-10-24',
+      featured: true,
+      link: '#tutu-cumple',
+      birthday: true
+    },
+    {
+      id: 2,
       title: 'OpenAI Lanza GPT-5 con Razonamiento Avanzado',
       excerpt: 'El nuevo modelo alcanza niveles de comprensión contextual nunca antes vistos, revolucionando la interacción humano-IA...',
       category: 'Novedades',
@@ -21,7 +32,7 @@ const SITE_DATA = {
       link: 'novedades.html#gpt-5'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Neuralink Consigue Primer Control Robótico por Pensamiento',
       excerpt: 'Pacientes con parálisis controlan brazos robóticos con interfaces cerebro-computadora de última generación...',
       category: 'Robótica',
@@ -29,16 +40,6 @@ const SITE_DATA = {
       date: '2025-09-12',
       featured: true,
       link: 'robotica.html#neuralink'
-    },
-    {
-      id: 3,
-      title: 'IA Predice y Previene Desastres Naturales en América Latina',
-      excerpt: 'Sistema de machine learning salva miles de vidas anticipando terremotos e inundaciones con semanas de anticipación...',
-      category: 'IA Positiva',
-      image: 'imagenes/Predicción Terremotos.png',
-      date: '2025-09-10',
-      featured: true,
-      link: 'ia-positiva.html#desastres'
     }
   ],
 
@@ -218,6 +219,45 @@ const SITE_DATA = {
         wowFactor: '¡Mozart está componiendo música nueva!'
       }
     ]
+  },
+
+  // Contenido especial de cumpleaños
+  birthdaySpecial: {
+    title: '🎉 ¡Feliz Cumpleaños Andrés "Tutu" Garrido! 🎂',
+    content: {
+      hero: {
+        title: 'Celebrando a una Leyenda del Deporte y la Educación',
+        subtitle: 'Profesor, Empresario, Padre y Campeón del Espíritu Deportivo',
+        image: 'assets/images/andres-garrido-birthday.png',
+        date: '24 de Octubre de 2025'
+      },
+      sections: [
+        {
+          title: '🏀 El Profesor Apasionado',
+          content: 'Andrés "Tutu" Garrido no es solo un profesor de educación física, es un formador de vidas. Desde General Roca, Río Negro, ha inspirado a generaciones de estudiantes a descubrir el poder del movimiento, la disciplina y el trabajo en equipo. Su pasión por el deporte trasciende el aula y se refleja en cada joven que ha tenido el privilegio de aprender de él.'
+        },
+        {
+          title: '🚴‍♂️ Campeón en Dos Ruedas',
+          content: 'El ciclismo no es solo un hobby para Tutu, es una filosofía de vida. Cada kilómetro en su bicicleta representa su perseverancia, su capacidad de superar obstáculos y su amor por la naturaleza. Ya sea compitiendo o disfrutando de un paseo, su espíritu competitivo y su energía contagian a todos a su alrededor.'
+        },
+        {
+          title: '💪 Serena Pilates: Bienestar y Salud',
+          content: 'Como emprendedor, Andrés creó Serena Pilates, un espacio donde el bienestar se encuentra con la excelencia. Su gimnasio no es solo un lugar de ejercicio, es un centro de transformación donde las personas descubren versiones mejores de sí mismas. Su conocimiento como profesor de educación física y su visión empresarial crearon el ambiente perfecto para el crecimiento físico y mental.'
+        },
+        {
+          title: '⚽ Hoy se Juega: Pasión por el Fútbol',
+          content: 'Su predio de Futbol 5 "Hoy se Juega" es más que un negocio, es el corazón de la comunidad deportiva local. Allí se forjan amistades, se viven rivalidades sanas y se celebra el espíritu del deporte. Tutu ha creado un espacio donde familias y amigos se reúnen para compartir su amor por el fútbol y el deporte en general.'
+        },
+        {
+          title: '👨‍👩‍👧‍👦 El Corazón de una Familia Increíble',
+          content: 'Más allá de todos sus logros profesionales, Andrés es el corazón de su familia. Esposo amoroso de Sole y padre orgulloso de Juan 👼, Margarita y Lucía. Su dedicación, su apoyo incondicional y su capacidad de equilibrar múltiples roles hacen de él un ejemplo de familia y compromiso. Cada logro suyo es también un logro familiar, celebrado con el amor y apoyo que solo una familia unida puede dar.'
+        }
+      ],
+      specialMessage: {
+        title: '🌟 Un Mensaje Especial',
+        content: 'Andrés "Tutu" Garrido, hoy celebramos no solo tu cumpleaños, sino el impacto positivo que has tenido en incontables vidas. Eres esa persona que demuestra que con pasión, dedicación y corazón, se puede hacer una diferencia real en el mundo. Tu energía es contagiosa, tu ejemplo inspira y tu legado trasciende generaciones. ¡Feliz cumpleaños, campeón! 🏆'
+      }
+    }
   },
 
   // Contenido completo para Robótica

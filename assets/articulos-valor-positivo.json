@@ -1,6 +1,23 @@
 {
   "articulos": [
     {
+      "id": "celebracion-andres-garrido",
+      "titulo": "Celebramos a Andrés \"Tutu\" Garrido",
+      "imagen": "assets/images/andres-garrido-birthday.png",
+      "descripcion": "Un homenaje a la energía contagiosa del profe de Pilates que impulsa hábitos saludables desde Serena Pilates en General Roca.",
+      "valorPositivo": "Andrés crea comunidad a través del movimiento consciente: acompaña a familias enteras a encontrar bienestar, inspira constancia y comparte la alegría del deporte con cada sesión de Serena Pilates.",
+      "usoComun": "Súmate a su estilo: integra estiramientos breves en la rutina familiar, combina ejercicio con celebración y apoya emprendimientos locales que promueven el cuidado del cuerpo y la mente.",
+      "casosUso": [
+        "Organiza una clase especial en casa inspirada en los tips de Andrés para movernos en familia.",
+        "Invita a tus amistades a un paseo en bicicleta o un picadito amistoso para celebrar momentos importantes.",
+        "Regala una sesión de bienestar en un estudio local para reconocer a quienes cuidan de la comunidad."
+      ],
+      "buenasPracticas": "Celebra con equilibrio: hidrátate, respira profundo entre actividades y toma una pausa de gratitud por las personas que te impulsan a seguir creciendo, como hace Andrés cada día en Serena Pilates.",
+      "categoria": "comunidad",
+      "fecha": "2025-10-24",
+      "icono": "fa-birthday-cake"
+    },
+    {
       "id": "agi-inteligencia-general",
       "titulo": "AGI: Inteligencia Artificial General",
       "imagen": "assets/images/articulo_agi.png",
@@ -177,6 +194,11 @@
       "nombre": "Seguridad Digital",
       "color": "#6366f1",
       "icono": "fa-shield-alt"
+    },
+    "comunidad": {
+      "nombre": "Comunidad y Bienestar",
+      "color": "#f97316",
+      "icono": "fa-hand-holding-heart"
     }
   }
 }

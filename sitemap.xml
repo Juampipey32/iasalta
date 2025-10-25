@@ -8,37 +8,19 @@
   </url>
   <url>
     <loc>https://juampi-ia.com/ia-positiva.html</loc>
-    <lastmod>2024-01-10</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://juampi-ia.com/novedades.html</loc>
-    <lastmod>2024-01-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://juampi-ia.com/curiosidades.html</loc>
-    <lastmod>2024-01-08</lastmod>
+    <loc>https://juampi-ia.com/lo-basico-ia.html</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://juampi-ia.com/robotica.html</loc>
-    <lastmod>2024-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://juampi-ia.com/playlist.html</loc>
-    <lastmod>2024-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://juampi-ia.com/contacto.html</loc>
-    <lastmod>2024-01-01</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -61,3 +43,5 @@
     <priority>0.6</priority>
   </url>
 </urlset>
+
+
